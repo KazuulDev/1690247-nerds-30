@@ -25,10 +25,10 @@
 
 <h1>Магазин готовых шаблонов</h1>
 
-    <section>
+    <aside>
     <h2>Стоимость</h2>
     <form method="GET" action="https://echo.htmlacademy.ru">
-    <div><input type="number" min="0" max="15000"></div>
+    <div><input type="number" min="0" max="15000" step="100" placeholder="15000"></div>
     
      <fieldset>
         <legend>Сетка:</legend>
@@ -38,86 +38,86 @@
             <label for="grid_adapt">Адаптивная</label>
           </li>
           <li>
-            <input type="radio" name="grid_type" value="fi" id="grid_fix">
+            <input type="radio" name="grid_type" value="fix" id="grid_fix">
             <label for="grid_fix">Фиксированная</label>
           </li>
           <li>
-            <input type="radio" name="grid_type" value="rubber" id="grid_rubber">
-            <label for="grid_rubber">Резиновая</label>
+            <input type="radio" name="grid_type" value="flex" id="grid_flex">
+            <label for="grid_flex">Резиновая</label>
           </li>
         </ul>
       </fieldset>
       <fieldset>
-          <Legend>Особенности</Legend>
+          <legend>Особенности</legend>
           <ul>
             <li>
-              <input type="checkbox" name="Slider" id="specs_slider">
+              <input type="checkbox" name="slider" value="slider" id="specs_slider">
               <label for="specs_slider">Слайдер</label>
             </li>
             <li>
-                <input type="checkbox" name="Advantages" id="specs_adv">
+                <input type="checkbox" name="advantages" value="advantages" id="specs_adv">
                 <label for="specs_adv">Блок преимуществ</label>
               </li>
               <li>
-                <input type="checkbox" name="News" id="specs_news">
+                <input type="checkbox" name="news" value="news" id="specs_news">
                 <label for="specs_news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" name="Gallery" id="specs_gallery">
+                <input type="checkbox" name="gallery" value="gallery" id="specs_gallery">
                 <label for="specs_gallery">Галерея</label>
               </li>
               <li>
-                <input type="checkbox" name="Bin" id="specs_bin">
+                <input type="checkbox" name="bin" value="bin" id="specs_bin">
                 <label for="specs_bin">Корзина</label>
               </li>
             </ul>
       </fieldset>
       <button type="submit">Показать</button>
-    </section>
+    </aside>
 </form>
 <section>
     <h2></h2>
     <ul>
       <li>
         <a href="blank.html">
-        <p>
+
          <img src="https://via.placeholder.com/360x619" alt="SEDONA">
-        </p>
+
         </a>
       </li>
       <li>
         <a href="blank.html">
-        <p>
+
          <img src="https://via.placeholder.com/360x619" alt="PINK">
-        </p>
+
         </a>
       </li>
       <li>
         <a href="blank.html">
-        <p>
+
          <img src="https://via.placeholder.com/360x619" alt="BORODINSKIY">
-        </p>
+
         </a>
       </li>
       <li>
         <a href="blank.html">
-        <p>
+
          <img src="https://via.placeholder.com/360x619" alt="MISHKA">
-        </p>
+
         </a>
       </li>
       <li>
         <a href="blank.html">
-        <p>
+
          <img src="https://via.placeholder.com/360x619" alt="UCHEBA">
-        </p>
+
         </a>
       </li>
       <li>
         <a href="blank.html">
-        <p>
+
          <img src="https://via.placeholder.com/360x619" alt="KVAST">
-        </p>
+
         </a>
       </li>
     </ul>
@@ -140,8 +140,6 @@
     
   
   <footer>
-      <br>
-     
       Давайте дружить, это выгодно!<br>
       Скидка 10% для друзей из социальных сетей.
     </footer>
