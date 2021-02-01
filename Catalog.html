@@ -3,16 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс "Магазин"</title>
+    <title>HTML Academy: Нёрдс</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/style.css"> @font-face { font-family: "Roboto"; font-weight: 400; }
 </head>
 
-<body>
-    <header>
+<body class="page">
+    <header class="top">
         <nav>
             <a href="index.html">
                 <img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс">
@@ -36,6 +37,7 @@
                 <div></div>
                 <div></div>
                 От <input type="number" placeholder="0" id="cost_min"> До <input type="number" placeholder="15000" id="cost_max">
+                <input type="range">
                 <fieldset>
                     <legend>Сетка:</legend>
                     <ul>
