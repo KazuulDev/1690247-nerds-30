@@ -1,15 +1,122 @@
 :root {
-    --main-color: white;
+    --background: #ffffff;
+    --nav-color: #eeeeee;
+    --non-basic-black: #283136;
+    --basic-black: #000000;
+    --red-nav: #FB565A;
+    --green: #00CA74;
+    --mustard: #EFC849;
+}
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--non-basic-black);
+    background-color: var(--background);
+}
+
+main {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 30px;
+    background-color: transparent;
+    line-height: 18px;
+}
+
+.main-nav {
+    background-color: var(--nav-color);
+}
+
+body li {
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--basic-black);
+}
+
+.main-nav a:hover {
+    color: var(--red-nav);
+}
+
+.main-nav a:active {
+    color: inherit;
+    opacity: 30%;
 }
 
 
-/* заголовок */
+/* Кнопки */
 
-.top {
-    background-color: #eeeeee;
+
+/* не разобрался, что делать с кнопками. вроде бы хорошо их отрисовать в самом браузере, но я не понял,
+ как запихнуть текст на цветную кнопку (знаю только background-color, но как его закруглить?)
+а если пихнуть просто картинкой, то как засунуть текст на нее */
+
+.button {
+    padding-top: 17px;
+    padding-bottom: 15px;
+    color: var(--background);
+}
+
+.slider-main {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 100%;
+    color: var(--basic-black)
 }
 
 
-/* обычный шрифт */
+/* .products {
+сюда нужно расписать кнопку
+}
+*/
 
-.regular {}
+.product {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.about {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.we {
+    font-size: 45px;
+    line-height: 100%;
+    font-weight: 500;
+    color: var(--basic-black)
+}
+
+.num {
+    font-size: 45px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.num-description {
+    line-height: 18px;
+}
+
+.social h2 {
+    font-size: 36px;
+    line-height: 100%;
+}
+
+.social p {
+    font-size: 16px;
+    line-height: 22px;
+}
