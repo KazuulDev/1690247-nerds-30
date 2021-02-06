@@ -49,7 +49,7 @@ body li {
     color: var(--red-nav);
 }
 
-.main-nav a:active {
+.current-page {
     color: inherit;
     opacity: 30%;
 }
