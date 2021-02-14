@@ -60,7 +60,7 @@ li {
 .main-grid {
     grid-row: 2/2;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .aside-grid {
