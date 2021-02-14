@@ -8,12 +8,14 @@
     <link rel="icon" href="img/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body class="page">
-    <header>
+<body class="page catalog-grid">
+
+    <header class="header-grid">
         <nav class="main-nav">
             <a href="index.html">
                 <img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс">
@@ -27,104 +29,100 @@
             <p><a href="blanc.html">Корзина</a></p>
         </nav>
     </header>
-    <main>
-        <div>
-            <h1>Магазин готовых шаблонов</h1>
-        </div>
-        <aside>
-            <legend>Стоимость</legend>
-            <form method="GET" action="https://echo.htmlacademy.ru">
-                <!-- уверен, что есть возможность настроить шрифт плейсхолдера, но не понял, как это сделать -->
-                <span style="text-transform: uppercase;"> От </span> <input type="number" placeholder="0" id="cost_min"> <span style="text-transform: uppercase;"> До </span><input type="number" placeholder="15000" id="cost_max">
-                <input type="range">
-                <fieldset>
-                    <legend>Сетка:</legend>
-                    <ul>
-                        <li>
-                            <input type="radio" name="grid_type" value="adapt" id="grid_adapt" checked>
-                            <label for="grid_adapt">Адаптивная</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="grid_type" value="fix" id="grid_fix">
-                            <label for="grid_fix">Фиксированная</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="grid_type" value="flex" id="grid_flex">
-                            <label for="grid_flex">Резиновая</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset class="grid">
-                    <legend>Особенности</legend>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="slider" value="slider" id="specs_slider">
-                            <label for="specs_slider">Слайдер</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="advantages" value="advantages" id="specs_adv">
-                            <label for="specs_adv">Блок преимуществ</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="news" value="news" id="specs_news">
-                            <label for="specs_news">Новости</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="gallery" value="gallery" id="specs_gallery">
-                            <label for="specs_gallery">Галерея</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="bin" value="bin" id="specs_bin">
-                            <label for="specs_bin">Корзина</label>
-                        </li>
-                    </ul>
-                </fieldset>
+    <main class="main-grid">
+        <h1 class="page-description">Магазин готовых шаблонов</h1>
+        <aside class="aside-grid">
+            <fieldset>
+                <legend>Стоимость</legend>
+                <form method="GET" action="https://echo.htmlacademy.ru">
+                    <!-- уверен, что есть возможность настроить шрифт плейсхолдера, но не понял, как это сделать -->
+                    <span style="text-transform: uppercase;"> От </span> <input type="number" placeholder="0" id="cost_min"> <span style="text-transform: uppercase;"> До </span><input type="number" placeholder="15000" id="cost_max">
+                    <input type="range">
+            </fieldset>
+            <fieldset>
+                <legend>Сетка:</legend>
+                <ul class="grid">
+                    <li>
+                        <input type="radio" name="grid_type" value="adapt" id="grid_adapt" checked>
+                        <label for="grid_adapt">Адаптивная</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="grid_type" value="fix" id="grid_fix">
+                        <label for="grid_fix">Фиксированная</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="grid_type" value="flex" id="grid_flex">
+                        <label for="grid_flex">Резиновая</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Особенности</legend>
+                <ul class="grid">
+                    <li>
+                        <input type="checkbox" name="slider" value="slider" id="specs_slider">
+                        <label for="specs_slider">Слайдер</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="advantages" value="advantages" id="specs_adv">
+                        <label for="specs_adv">Блок преимуществ</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="news" value="news" id="specs_news">
+                        <label for="specs_news">Новости</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="gallery" value="gallery" id="specs_gallery">
+                        <label for="specs_gallery">Галерея</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="bin" value="bin" id="specs_bin">
+                        <label for="specs_bin">Корзина</label>
+                    </li>
+                </ul>
+            </fieldset>
 
-                <button class="submit" type="submit">Показать</button>
+            <button class="submit" type="submit">Показать</button>
+            </form>
         </aside>
-        </form>
-        <fieldset class="filter ">
-            <!-- тут удалось убрать радиокружки, но как стилизовать сами эти инпуты я не понял -->
-            <!-- и как объяснить браузеру, что нажатие на название - это выбор этого варианта - тоже непонятно -->
-            <legend>Сортировать:</legend>
-            <input type="radio " name="sort " value="cost " id="sort-cost " checked>
-            <label for="sort-cost ">По цене</label>
-            <input type="radio " name="sort " value="type " id="sort-type ">
-            <label for="sort-type ">По типу</label>
-            <input type="radio " name="sort " value="name " id="sort-name ">
-            <label for="sort-name ">По названию</label>
-        </fieldset>
+        <div>
+            <span class="filter-legend">Сортировать:</span>
+            <span class="filter">По цене</span>
+            <span class="filter">По типу</span>
+            <span class="filter">По названию</span>
+            <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию">
+            <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию">
+        </div>
         <section>
-            <!-- потом спрятать -->
-            <h2 style="display: none; ">Шаблоны сайтов</h2>
+            <h2 style="display: none;">Шаблоны сайтов</h2>
             <div>
-                <a href="blank.html ">
-                    <img src="img/img-sedona.png " width="359 " height="578 " alt="SEDONA ">
+                <a href="blank.html">
+                    <img src="img/img-sedona.png" width="359" height="578" alt="SEDONA">
                 </a>
             </div>
             <div>
-                <a href="blank.html ">
-                    <img src="img/img-pink.png " width="359 " height="578 " alt="Pink ">
+                <a href="blank.html">
+                    <img src="img/img-pink.png" width="359" height="578" alt="Pink">
                 </a>
             </div>
             <div>
-                <a href="blank.html ">
-                    <img src="img/img-barbershop.png " width="359 " height="578 " alt="Barbershop ">
+                <a href="blank.html">
+                    <img src="img/img-barbershop.png" width="359" height="578" alt="Barbershop">
                 </a>
             </div>
             <div>
-                <a href="blank.html ">
-                    <img src="img/img-mishka.png " width="359 " height="578 " alt="Mishka ">
+                <a href="blank.html">
+                    <img src="img/img-mishka.png" width="359" height="578" alt="Mishka">
                 </a>
             </div>
             <div>
-                <a href="blank.html ">
-                    <img src="img/img-aplus.png " width="359 " height="578 " alt="APlus ">
+                <a href="blank.html">
+                    <img src="img/img-aplus.png" width="359" height="578" alt="APlus">
                 </a>
             </div>
             <div>
-                <a href="blank.html ">
-                    <img src="img/img-kvast.png " width="359 " height="578 " alt="Kvast ">
+                <a href="blank.html">
+                    <img src="img/img-kvast.png" width="359" height="578" alt="Kvast">
                 </a>
             </div>
             <ul>
@@ -132,29 +130,31 @@
                     <a>1</a>
                 </li>
                 <li>
-                    <a href="# ">2</a>
+                    <a href="#">2</a>
                 </li>
                 <li>
-                    <a href="# ">3</a>
+                    <a href="#">3</a>
                 </li>
                 <li>
-                    <a href="# ">Следующая</a>
+                    <a href="#">Следующая</a>
                 </li>
             </ul>
         </section>
-    </main>
-    <footer class="social ">
-        <div>
-            <a href="https://vk.com/htmlacademy ">
-                <img src="img/vk-ico.svg " alt="Вконтакте "></a>
-            <a href="https://www.facebook.com/htmlacademy/ ">
-                <img src="img/fb-ico.svg " alt="Facebook "></a>
-            <a href="https://www.instagram.com/htmlacademy/ ">
-                <img src="img/insta-ico.svg " alt="Instagram "></a>
         </div>
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p> Скидка 10% для друзей из социальных сетей.</p>
+    </main>
+    <footer class="footer-grid">
+        <div>
+            <a href="https://vk.com/htmlacademy">
+                <img src="img/vk-ico.svg" alt="Вконтакте"></a>
+            <a href="https://www.facebook.com/htmlacademy/">
+                <img src="img/fb-ico.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/htmlacademy/">
+                <img src="img/insta-ico.svg" alt="Instagram"></a>
+        </div>
+        <h2 class="social-header">Давайте дружить, это выгодно!</h2>
+        <p class="social-description"> Скидка 10% для друзей из социальных сетей.</p>
     </footer>
+    </div>
 </body>
 
 </html>

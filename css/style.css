@@ -4,12 +4,22 @@
     --non-basic-black: #283136;
     --basic-black: #000000;
     --red-nav: #FB565A;
+    --hover-red-nav: #e74246;
+    --active-red-nav: #D7373B;
     --green: #00CA74;
+    --hover-green: #00BC6C;
+    --active-green: #00AA62;
     --mustard: #EFC849;
+    --hover-mustard: #EAB534;
+    --active-mustard: #E5A722;
     --social: #444444;
+    --shadow: rgba(0, 1, 1, 0.1);
 }
 
-body {
+
+/* Global */
+
+.page {
     min-width: 1200px;
     margin: 0;
     padding: 0;
@@ -21,10 +31,6 @@ body {
     background-color: var(--background);
 }
 
-main {
-    text-align: center;
-}
-
 a {
     text-decoration: none;
     text-transform: uppercase;
@@ -34,12 +40,59 @@ a {
     line-height: 18px;
 }
 
-.main-nav {
+li {
+    list-style: none;
+}
+
+
+/* Grid */
+
+.index-grid {
+    min-height: 1vw;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.catalog-grid {
+    min-height: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.header-grid {
+    grid-column: 1/3;
+    grid-row: 1/1;
+}
+
+.main-grid {
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+
+.footer-grid {
+    grid-column: 1/3;
+    grid-row: 3/3;
+}
+
+
+/* а тут конец будет у гридов (или нет) */
+
+.slider {
     background-color: var(--nav-color);
 }
 
-body li {
-    list-style: none;
+.main-nav {
+    background-color: var(--nav-color);
+    margin-bottom: 0;
+}
+
+.page-description {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 100%;
+    color: var(--basic-black)
 }
 
 .main-nav a {
@@ -53,20 +106,71 @@ body li {
 .current-page {
     color: inherit;
     opacity: 30%;
+    border-bottom: var(--red-nav) 2px solid;
+    padding-bottom: 23px;
 }
 
 
 /* Кнопки */
 
-
-/* не разобрался, что делать с кнопками. вроде бы хорошо их отрисовать в самом браузере, но я не понял,
- как запихнуть текст на цветную кнопку (знаю только background-color, но как его закруглить?)
-а если пихнуть просто картинкой, то как засунуть текст на нее */
-
 .button {
-    padding-top: 17px;
-    padding-bottom: 15px;
     color: var(--background);
+    background-color: var(--red-nav);
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: var(--hover-red-nav);
+}
+
+.button:active {
+    background-color: var(--active-red-nav);
+    box-shadow: inset 0px 3px 0px var(--shadow);
+}
+
+.button-site {
+    color: var(--background);
+    background-color: var(--red-nav);
+    border-radius: 3px;
+}
+
+.button-site:hover {
+    background-color: var(--hover-red-nav);
+}
+
+.button-site:active {
+    background-color: var(--active-red-nav);
+    box-shadow: inset 0px 3px 0px var(--shadow);
+}
+
+.button-apps {
+    color: var(--background);
+    background-color: var(--green);
+    border-radius: 3px;
+}
+
+.button-apps:hover {
+    background-color: var(--hover-green);
+}
+
+.button-apps:active {
+    background-color: var(--active-green);
+    box-shadow: inset 0px 3px 0px var(--shadow);
+}
+
+.button-presentation {
+    color: var(--background);
+    background-color: var(--mustard);
+    border-radius: 3px;
+}
+
+.button-presentation:hover {
+    background-color: var(--hover-mustard);
+}
+
+.button-presentation:active {
+    background-color: var(--active-mustard);
+    box-shadow: inset 0px 3px 0px var(--shadow);
 }
 
 .slider-main {
@@ -75,12 +179,6 @@ body li {
     line-height: 100%;
     color: var(--basic-black)
 }
-
-
-/* .products {
-сюда нужно расписать кнопку
-}
-*/
 
 .product {
     font-weight: 700;
@@ -95,14 +193,14 @@ body li {
     color: var(--basic-black);
 }
 
-.we {
+.we-are {
     font-size: 45px;
     line-height: 100%;
     font-weight: 500;
     color: var(--basic-black)
 }
 
-.num {
+.num-we-are {
     font-size: 45px;
     line-height: 64px;
     font-weight: 700;
@@ -112,22 +210,19 @@ body li {
     line-height: 18px;
 }
 
-.social h2 {
+.social-header {
     font-size: 36px;
     line-height: 100%;
     color: var(--basic-black);
 }
 
-.social p {
+.social-description {
     font-size: 16px;
     line-height: 22px;
     color: var(--social);
 }
 
-
-/* пока непонятно, как сделать прозрачность у неактивных элементов */
-
-.filter legend {
+.filter-legend {
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
@@ -135,17 +230,14 @@ body li {
     color: var(--basic-black);
 }
 
-.filter input {
-    display: none;
-}
-
-.filter label {
+.filter {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 18px;
+    opacity: 30%;
 }
 
-.grid label {
+.grid {
     font-size: 16px;
     line-height: 20px;
 }
@@ -157,9 +249,19 @@ body li {
     line-height: 18px;
 }
 
-h1 {
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 100%;
-    color: var(--basic-black)
+.partners {
+    border-top: var(--nav-color) 2px solid;
+    border-bottom: var(--nav-color) 2px solid;
+}
+
+.partners a {
+    opacity: 20%;
+}
+
+.partners a:hover {
+    opacity: 100%;
+}
+
+.partners a:active {
+    opacity: 10%;
 }

@@ -8,13 +8,13 @@
     <link rel="icon" href="img/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
+<body class="page index-grid">
+    <header class="header-grid">
         <nav class="main-nav">
             <a href="#">
                 <img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс">
@@ -28,37 +28,38 @@
             <p><a href="blanc.html">Корзина</a></p>
         </nav>
     </header>
-    <main>
+    <main class="main-grid">
         <h1 style="display: none;">Дизайн-студия "Нёрдс"</h1>
+
+        <div class="slider">
+            <img src="img/slider_mobile.png" alt="Слайдер">
+            <p class="slider-main">Долго, дорого, скурпулезно.</p>
+            <h2 style="font: inherit;">Математически выверенный дизайн для вашего сайта или мобильного приложения. </h2>
+            <a class="button" href="#">Узнать больше</a>
+        </div>
         <section class="production">
-            <div>
-                <img src="img/slider_mobile.png" alt="Слайдер">
-                <p class="slider-main">Долго, дорого, скурпулезно.</p>
-                <h2 style="font: inherit;">Математически выверенный дизайн для вашего сайта или мобильного приложения. </h2>
-                <a class="button" href="#">Узнать больше</a>
-            </div>
             <div>
                 <img src="img/site.png" width="300" height="146" alt="Веб-сайты">
                 <h3 class="product">Веб-сайты</h3>
                 <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                <a class="button" href="blank.html">Заказать</a>
+                <a class="button-site" href="blank.html">Заказать</a>
             </div>
             <div>
                 <img src="img/app.png" width="300" height="146" alt="Приложения">
                 <h3 class="product">Приложения</h3>
                 <p>Покорите топ-10 приложений в AppStore и Google Play<br></p>
-                <a class="button" href="blank.html">Заказать</a>
+                <a class="button-apps" href="blank.html">Заказать</a>
             </div>
             <div>
                 <img src="img/present.png" width="300" height="146" alt="Презентации">
                 <h3 class="product">Презентации</h3>
                 <p>Вы даже не подозреваете, насколько вы изумительны! </p>
-                <a class="button" href="blank.html">Заказать</a>
+                <a class="button-presentation" href="blank.html">Заказать</a>
             </div>
         </section>
         <section>
             <article>
-                <p class="we">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+                <p class="we-are">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
                 <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
                 <img src="img/nerds-illustration_1.svg" alt="Логотип дизайн-студии Нёрдс" width="360" height="208">
             </article>
@@ -74,21 +75,21 @@
                 <p class="about">C 2004 года любим точность во всем:</p>
                 <ul>
                     <li>
-                        <p class="num">146%</p>
+                        <p class="num-we-are">146%</p>
                         <p class="num-description">Уровень самоотдачи</p>
                     </li>
                     <li>
-                        <p class="num">100%</p>
+                        <p class="num-we-are">100%</p>
                         <p class="num-description">Соблюдение сроков</p>
                     </li>
                     <li>
-                        <p class="num">50%</p>
+                        <p class="num-we-are">50%</p>
                         <p class="num-description">Минимальная предоплата</p>
                     </li>
                 </ul>
             </article>
         </section>
-        <div>
+        <div class="partners">
             <ul>
                 <li>
                     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacalogo.svg" alt="HTML Academy" width="199" height="68"></a>
@@ -104,8 +105,9 @@
                 </li>
             </ul>
         </div>
+
     </main>
-    <footer class="social">
+    <footer class="footer-grid">
         <div>
             <a href="https://vk.com/htmlacademy">
                 <img src="img/vk-ico.svg" alt="Вконтакте"></a>
@@ -114,8 +116,8 @@
             <a href="https://www.instagram.com/htmlacademy/">
                 <img src="img/insta-ico.svg" alt="Instagram"></a>
         </div>
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p> Скидка 10% для друзей из социальных сетей.</p>
+        <h2 class="social-header">Давайте дружить, это выгодно!</h2>
+        <p class="social-description"> Скидка 10% для друзей из социальных сетей.</p>
     </footer>
 </body>
 
