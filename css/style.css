@@ -55,12 +55,19 @@ li {
 
 .header-grid {
     grid-row: 1/1;
+    grid: flex;
+}
+
+.catalog-main-grid {
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .main-grid {
     grid-row: 2/2;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .aside-grid {
@@ -69,14 +76,45 @@ li {
 
 .catalog-items {
     grid-column: 2/4;
+    display: flex;
 }
 
 .footer-grid {
     grid-row: 3/3;
+    align-content: center;
 }
 
 
 /* а тут конец будет у гридов (или нет) */
+
+
+/* Flex */
+
+.nav-flex {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 114px;
+}
+
+.ul-nav-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-basis: auto;
+}
+
+.li-nav-flex {}
+
+.production-flex {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    justify-content: space-between;
+}
+
+
+/* а тут конец флексов, да */
 
 .slider {
     background-color: var(--nav-color);
