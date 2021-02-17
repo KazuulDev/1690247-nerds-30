@@ -14,24 +14,25 @@
 </head>
 
 <body class="page index-grid">
-
-    <header class="header-grid nav-wrapper">
-        <nav class="main-nav">
-            <a max href="index.html">
-                <img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс">
-            </a>
-            <ul class="ul-nav-flex">
-                <li class=""><a href="index.html">Cтудия</a></li>
-                <li><a href="blanc.html">Клиенты</a></li>
-                <li><a class="current-page" href="catalog.html">Магазин</a></li>
-                <li><a href="blanc.html">Контакты</a></li>
-            </ul>
-            <p><a href="blanc.html">Корзина</a></p>
-        </nav>
+    <header class="header-grid">
+        <div class="flex-container">
+            <nav class="main-nav nav-flex">
+                <a href="#">
+                    <img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс">
+                </a>
+                <ul class="ul-nav-flex">
+                    <li><a class="li-nav-flex" href="index.html">Cтудия</a></li>
+                    <li><a class="li-nav-flex" href="blanc.html">Клиенты</a></li>
+                    <li><a class="current-page li-nav-flex" href="catalog.html">Магазин</a></li>
+                    <li><a class="li-nav-flex" href="blanc.html">Контакты</a></li>
+                </ul>
+                <p><a href="blanc.html">Корзина</a></p>
+            </nav>
+            <h1 class="page-description">Магазин готовых шаблонов</h1>
+        </div>
     </header>
     <main class="catalog-main-grid">
-        <h1 class="page-description">Магазин готовых шаблонов</h1>
-        <aside class="aside-grid">
+        <aside class="aside-grid flex-container">
             <fieldset>
                 <legend>Стоимость</legend>
                 <form method="GET" action="https://echo.htmlacademy.ru">
@@ -92,7 +93,7 @@
             <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию">
             <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию">
         </div>
-        <section class="catalog-items">
+        <section class="catalog-items flex-container">
             <h2 style="display: none;">Шаблоны сайтов</h2>
             <div>
                 <a href="blank.html">
@@ -124,7 +125,6 @@
                     <img src="img/img-kvast.png" width="359" height="578" alt="Kvast">
                 </a>
             </div>
-
         </section>
         <ul>
             <li>
@@ -140,21 +140,24 @@
                 <a href="#">Следующая</a>
             </li>
         </ul>
-        </div>
+
     </main>
     <footer class="footer-grid">
-        <div>
-            <a href="https://vk.com/htmlacademy">
-                <img src="img/vk-ico.svg" alt="Вконтакте"></a>
-            <a href="https://www.facebook.com/htmlacademy/">
-                <img src="img/fb-ico.svg" alt="Facebook"></a>
-            <a href="https://www.instagram.com/htmlacademy/">
-                <img src="img/insta-ico.svg" alt="Instagram"></a>
+        <div class="flex-container">
+            <section class="icons-social-flex">
+                <a href="https://vk.com/htmlacademy">
+                    <img src="img/vk-ico.svg" alt="Вконтакте"></a>
+                <a href="https://www.facebook.com/htmlacademy/">
+                    <img src="img/fb-ico.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/htmlacademy/">
+                    <img src="img/insta-ico.svg" alt="Instagram"></a>
+            </section>
+            <article>
+                <h2 class="social-header">Давайте дружить, это выгодно!</h2>
+                <p class="social-description"> Скидка 10% для друзей из социальных сетей.</p>
+            </article>
         </div>
-        <h2 class="social-header">Давайте дружить, это выгодно!</h2>
-        <p class="social-description"> Скидка 10% для друзей из социальных сетей.</p>
     </footer>
-    </div>
 </body>
 
 </html>

@@ -56,6 +56,8 @@ li {
 .header-grid {
     grid-row: 1/1;
     grid: flex;
+    justify-content: center;
+    background-color: #eeeeee;
 }
 
 .catalog-main-grid {
@@ -68,6 +70,7 @@ li {
     grid-row: 2/2;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .aside-grid {
@@ -90,6 +93,13 @@ li {
 
 /* Flex */
 
+.flex-container {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 90%;
+    box-sizing: content-box;
+}
+
 .nav-flex {
     display: flex;
     justify-content: space-around;
@@ -101,10 +111,11 @@ li {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    flex-basis: auto;
 }
 
-.li-nav-flex {}
+.li-nav-flex {
+    margin-right: 45px;
+}
 
 .production-flex {
     display: flex;
@@ -113,15 +124,40 @@ li {
     justify-content: space-between;
 }
 
+.production-item {
+    margin-right: 100px;
+}
+
+.partners-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 525px;
+    flex-direction: row;
+}
+
+.descripton-flex-left {
+    width: 650px;
+    /*  */
+}
+
+.descripton-flex-right {
+    justify-content: center;
+}
+
 
 /* а тут конец флексов, да */
 
 .slider {
-    background-color: var(--nav-color);
+    justify-content: center;
 }
 
 .main-nav {
-    background-color: var(--nav-color);
     margin-bottom: 0;
 }
 
@@ -129,7 +165,8 @@ li {
     font-weight: 500;
     font-size: 55px;
     line-height: 100%;
-    color: var(--basic-black)
+    color: var(--basic-black);
+    justify-content: center;
 }
 
 .main-nav a {
@@ -145,6 +182,26 @@ li {
     opacity: 30%;
     border-bottom: var(--red-nav) 2px solid;
     padding-bottom: 23px;
+}
+
+.num-we-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.we-are-li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.num-we-are span {
+    font-size: 26px;
+    line-height: 40px;
+    align-content: start;
+    margin-top: 4px;
 }
 
 
@@ -225,6 +282,7 @@ li {
 }
 
 .about {
+    margin-top: 37px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--basic-black);
@@ -241,6 +299,7 @@ li {
     font-size: 45px;
     line-height: 64px;
     font-weight: 700;
+    display: flex;
 }
 
 .num-description {
