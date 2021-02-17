@@ -152,16 +152,15 @@ li {
     justify-content: center;
 }
 
-
-/* а тут конец флексов, да */
-
 .slider {
     display: flex;
-    justify-content: space-around;
-    height: 430px;
-    width: auto;
+    height: 431px;
     flex-wrap: wrap;
+    flex-direction: column;
 }
+
+
+/* а тут конец флексов, да */
 
 .main-nav {
     margin-bottom: 0;
