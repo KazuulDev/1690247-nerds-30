@@ -96,8 +96,10 @@ li {
 .flex-container {
     margin: 0 auto;
     padding: 0 30px;
-    width: 90%;
+    width: 1160px;
     box-sizing: content-box;
+    /* так, тут оно не работает
+    justify-content: center; */
 }
 
 .nav-flex {
@@ -154,7 +156,11 @@ li {
 /* а тут конец флексов, да */
 
 .slider {
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    height: 430px;
+    width: auto;
+    flex-wrap: wrap;
 }
 
 .main-nav {
