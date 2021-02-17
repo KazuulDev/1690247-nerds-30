@@ -104,7 +104,7 @@ li {
 
 .nav-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     height: 114px;
 }
@@ -141,14 +141,15 @@ li {
     justify-content: space-between;
     height: 525px;
     flex-direction: row;
+    border-top: var(--nav-color) 2px solid;
 }
 
-.descripton-flex-left {
+.descripton-flex-article {
     width: 650px;
     /*  */
 }
 
-.descripton-flex-right {
+.descripton-flex-section {
     justify-content: center;
 }
 
@@ -157,6 +158,10 @@ li {
     height: 431px;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.slider-description {
+    width: 400px;
 }
 
 
@@ -276,7 +281,8 @@ li {
     font-weight: 500;
     font-size: 55px;
     line-height: 100%;
-    color: var(--basic-black)
+    color: var(--basic-black);
+    margin-top: 87px;
 }
 
 .product {
@@ -309,6 +315,7 @@ li {
 
 .num-description {
     line-height: 18px;
+    margin-top: 11px;
 }
 
 .social-header {
