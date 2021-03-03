@@ -20,28 +20,29 @@
                 <a href="#">
                     <img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс">
                 </a>
-                <ul class="ul-nav-flex">
+                <ul class="ul-nav-flex nav-center">
                     <li><a class="li-nav-flex" href="index.html">Cтудия</a></li>
                     <li><a class="li-nav-flex" href="blanc.html">Клиенты</a></li>
                     <li><a class="current-page li-nav-flex" href="catalog.html">Магазин</a></li>
                     <li><a class="li-nav-flex" href="blanc.html">Контакты</a></li>
                 </ul>
-                <p><a href="blanc.html">Корзина</a></p>
+                <p class="nav-center"><a href="blanc.html">Корзина</a></p>
             </nav>
             <h1 class="page-description">Магазин готовых шаблонов</h1>
         </div>
     </header>
-    <main class="catalog-main-grid">
-        <aside class="aside-grid flex-container">
-            <fieldset>
-                <legend>Стоимость</legend>
+    <main class="catalog-main-grid ">
+        <aside class="aside-flex">
+            <fieldset class="aside-fieldset">
+                <legend class="filter-legend">Стоимость</legend>
                 <form method="GET" action="https://echo.htmlacademy.ru">
                     <!-- уверен, что есть возможность настроить шрифт плейсхолдера, но не понял, как это сделать -->
-                    <span style="text-transform: uppercase;"> От </span> <input type="number" placeholder="0" id="cost_min"> <span style="text-transform: uppercase;"> До </span><input type="number" placeholder="15000" id="cost_max">
+                    <span class="filter-span"> От </span> <input class="input-number" type="number" placeholder="0" id="cost_min" min="0"> <span class="filter-span"> До </span><input class="input-number" type="number" placeholder="15000" id="cost_max"
+                        max="15000">
                     <input type="range">
             </fieldset>
-            <fieldset>
-                <legend>Сетка:</legend>
+            <fieldset class="aside-fieldset">
+                <legend class="filter-legend">Сетка:</legend>
                 <ul class="grid">
                     <li>
                         <input type="radio" name="grid_type" value="adapt" id="grid_adapt" checked>
@@ -57,89 +58,94 @@
                     </li>
                 </ul>
             </fieldset>
-            <fieldset>
-                <legend>Особенности</legend>
+            <fieldset class="aside-fieldset">
+                <legend class="filter-legend">Особенности</legend>
                 <ul class="grid">
                     <li>
-                        <input type="checkbox" name="slider" value="slider" id="specs_slider">
+                        <input class="check-box" type="checkbox" name="slider" value="slider" id="specs_slider">
                         <label for="specs_slider">Слайдер</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="advantages" value="advantages" id="specs_adv">
+                        <input class="check-box" type="checkbox" name="advantages" value="advantages" id="specs_adv">
                         <label for="specs_adv">Блок преимуществ</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="news" value="news" id="specs_news">
+                        <input class="check-box" type="checkbox" name="news" value="news" id="specs_news">
                         <label for="specs_news">Новости</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="gallery" value="gallery" id="specs_gallery">
+                        <input class="check-box" type="checkbox" name="gallery" value="gallery" id="specs_gallery">
                         <label for="specs_gallery">Галерея</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="bin" value="bin" id="specs_bin">
+                        <input class="check-box" type="checkbox" name="bin" value="bin" id="specs_bin">
                         <label for="specs_bin">Корзина</label>
                     </li>
                 </ul>
             </fieldset>
             <button class="submit" type="submit">Показать</button>
             </form>
+            </div>
         </aside>
-        <div>
-            <span class="filter-legend">Сортировать:</span>
-            <span class="filter">По цене</span>
-            <span class="filter">По типу</span>
-            <span class="filter">По названию</span>
-            <img src="img/icon-down-dir.svg" alt="Сортировка по убыванию">
-            <img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию">
-        </div>
-        <section class="catalog-items flex-container">
+
+        <section class="catalog-items shop-flex">
+            <div class="filter-wrapper">
+                <span class="filter-legend">Сортировать:</span>
+                <a href="#" class="filter">По цене</a>
+                <a href="#" class="filter">По типу</a>
+                <a href="#" class="filter">По названию</a>
+                <a href="#"><img src="img/icon-down-dir.svg" alt="Сортировка по убыванию"></a>
+                <a href="#"><img src="img/icon-up-dir.svg" alt="Сортировка по возрастанию"></a>
+            </div>
             <h2 style="display: none;">Шаблоны сайтов</h2>
-            <div>
-                <a href="blank.html">
-                    <img src="img/img-sedona.png" width="359" height="578" alt="SEDONA">
-                </a>
+            <div class="catalog-page">
+                <div class="catalog-item">
+                    <a href="blank.html">
+                        <img src="img/img-sedona.png" width="359" height="578" alt="SEDONA">
+                    </a>
+                </div>
+                <div class="catalog-item">
+                    <a href="blank.html">
+                        <img src="img/img-pink.png" width="359" height="578" alt="Pink">
+                    </a>
+                </div>
+                <div class="catalog-item">
+                    <a href="blank.html">
+                        <img src="img/img-barbershop.png" width="359" height="578" alt="Barbershop">
+                    </a>
+                </div>
+                <div class="catalog-item">
+                    <a href="blank.html">
+                        <img src="img/img-mishka.png" width="359" height="578" alt="Mishka">
+                    </a>
+                </div>
+                <div class="catalog-item">
+                    <a href="blank.html">
+                        <img src="img/img-aplus.png" width="359" height="578" alt="APlus">
+                    </a>
+                </div>
+                <div class="catalog-item">
+                    <a href="blank.html">
+                        <img src="img/img-kvast.png" width="359" height="578" alt="Kvast">
+                    </a>
+                </div>
             </div>
-            <div>
-                <a href="blank.html">
-                    <img src="img/img-pink.png" width="359" height="578" alt="Pink">
-                </a>
-            </div>
-            <div>
-                <a href="blank.html">
-                    <img src="img/img-barbershop.png" width="359" height="578" alt="Barbershop">
-                </a>
-            </div>
-            <div>
-                <a href="blank.html">
-                    <img src="img/img-mishka.png" width="359" height="578" alt="Mishka">
-                </a>
-            </div>
-            <div>
-                <a href="blank.html">
-                    <img src="img/img-aplus.png" width="359" height="578" alt="APlus">
-                </a>
-            </div>
-            <div>
-                <a href="blank.html">
-                    <img src="img/img-kvast.png" width="359" height="578" alt="Kvast">
-                </a>
-            </div>
+            <ul>
+                <li>
+                    <a>1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">Следующая</a>
+                </li>
+            </ul>
         </section>
-        <ul>
-            <li>
-                <a>1</a>
-            </li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">Следующая</a>
-            </li>
-        </ul>
+
 
     </main>
     <footer class="footer-grid">
