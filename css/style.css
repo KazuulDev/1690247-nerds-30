@@ -148,10 +148,8 @@ li {
 .partners-item {
     display: flex;
     position: relative;
-    align-self: center;
-    justify-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    align-items: center;
+    justify-self: center;
 }
 
 .partners-item+.partners-item::before {
@@ -160,29 +158,33 @@ li {
     height: 52px;
     width: 2px;
     background-color: var(--nav-color);
-    margin-left: -32px;
+    margin-left: -58px;
     margin-top: 2px;
 }
 
 .partners {
     display: flex;
-    margin-top: 0px;
     border-top: var(--nav-color) 2px solid;
     border-bottom: var(--nav-color) 2px solid;
     padding-top: 46px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 42px;
+    padding-bottom: 44px;
 }
 
 .partners a {
     opacity: 20%;
     display: flex;
-    align-self: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .partners-item img {
     display: flex;
     align-self: center;
+    justify-self: center;
 }
 
 .partners a:hover {
@@ -274,9 +276,6 @@ li {
     flex-wrap: wrap;
     height: 1900px;
 }
-
-
-/* а тут конец флексов, да */
 
 .main-nav {
     margin-bottom: 0;
@@ -375,6 +374,7 @@ li {
     border-radius: 3px;
     padding: 15px 54px 17px 54px;
     line-height: 18px;
+    border: none;
 }
 
 .button:hover {
@@ -443,7 +443,7 @@ li {
     font-size: 55px;
     line-height: 100%;
     color: var(--basic-black);
-    margin-top: 87px;
+    margin-top: 85px;
 }
 
 .slider-header {
@@ -510,12 +510,14 @@ li {
     font-size: 36px;
     line-height: 100%;
     color: var(--basic-black);
+    margin-bottom: 0;
 }
 
 .social-description {
     font-size: 16px;
     line-height: 22px;
     color: var(--social);
+    margin-top: 8px;
 }
 
 .filter-legend {
@@ -544,6 +546,11 @@ li {
     text-transform: uppercase;
     font-weight: 500;
     line-height: 18px;
+    background-color: var(--nav-color);
+    border-radius: 3px;
+    padding: 15px 88px 17px 89px;
+    line-height: 18px;
+    border: none;
 }
 
 .aside-fieldset {
@@ -563,9 +570,6 @@ li {
     text-align: center;
     border: 0px;
     margin-left: 11px;
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-    /* спер кусок, но он как-то не работае */
 }
 
 .filter-span {
@@ -577,14 +581,22 @@ li {
     height: 416px;
     margin-top: 80px;
     align-content: center;
+    position: relative;
 }
 
 .yandex-map {
     width: 100%;
     height: 416px;
-    position: relative;
+    position: absolute;
     border: 0px;
     z-index: -1;
+}
+
+.map-marker {
+    list-style: none;
+    position: absolute;
+    margin-left: 57%;
+    margin-top: 6%;
 }
 
 .contact {
@@ -594,18 +606,143 @@ li {
     width: 319px;
     height: 308px;
     position: absolute;
-    margin-top: 54px;
-    margin-left: 10vw;
-    padding: 50px;
-    align-content: space-between;
+    margin-top: 55px;
+    margin-left: 140px;
+    align-content: flex-start;
 }
 
 .contact h2 {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
-    margin-top: 43px;
-    margin-left: 0;
+    margin-top: 52px;
+    margin-left: 50px;
+    margin-bottom: 23px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--basic-black);
+}
+
+.contact p {
+    margin: 0 50px 22px 50px;
+    line-height: 18px;
+}
+
+.contact a {
+    padding-left: 44px;
+    padding-right: 44px;
+    margin-left: 50px;
+    margin-top: 13px;
+}
+
+.social-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.icons-social-flex {
+    display: flex;
+    margin-top: 68px;
+    margin-bottom: 68px;
+}
+
+.icons-social-flex a {
+    margin-right: 9px;
+}
+
+.social-description-article {
+    margin-top: 46px;
+    margin-right: 222px;
+}
+
+.modal-wrapper {
+    visibility: hidden;
+    width: 960px;
+    height: 590px;
+    position: sticky;
+    z-index: 2;
+    background-color: var(--background);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+    margin-top: -138px;
+    margin-left: 240px;
+}
+
+.modal-fieldset {
+    padding: 0px;
+    border: none;
+}
+
+.modal-form {
+    margin-left: 100px;
+    margin-top: 65px;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.modal-form h1 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 53px;
+    margin-bottom: 35px;
+}
+
+.modal-form legend {
+    margin-bottom: 5px;
+}
+
+.form-input {
+    border: 2px solid #D7DCDE;
+    border-radius: 3px;
+}
+
+.name-form {
+    width: 340px;
+    height: 46px;
+    padding-left: 16px;
+    align-content: space-around;
+    margin-right: 33px;
+    margin-bottom: 30px;
+}
+
+.mail-form {
+    width: 340px;
+    height: 46px;
+    padding-left: 16px;
+    align-content: space-around;
+}
+
+.text-form {
+    width: 744px;
+    height: 99px;
+    resize: none;
+    align-content: flex-start;
+    display: flex;
+    padding-left: 16px;
+    padding-top: 16px;
+    margin-bottom: 44px;
+}
+
+.form-input::-webkit-input-placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.5;
+}
+
+.form-input::-moz-placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.5;
+}
+
+.modal-button {
+    text-transform: uppercase;
+    padding-left: 83px;
+    padding-right: 83px;
 }
