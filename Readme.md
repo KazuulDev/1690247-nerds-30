@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Странный Прохожий](https://up.htmlacademy.ru/htmlcss/30/user/1690247).
-* Наставник: [Алексей Пудников](https://htmlacademy.ru/profile/id71418).
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>

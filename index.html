@@ -33,13 +33,37 @@
         </div>
     </header>
     <main class="main-grid">
-        <div class="slider">
-            <div class="slider-description">
-                <p class="slider-main">Долго, дорого, скрупулезно.</p>
-                <h2 class="slider-header">Математически выверенный дизайн <br>для вашего сайта или мобильного приложения. </h2>
-                <a class="button" href="# ">Узнать больше</a>
+        <div class="slider-wrapper">
+            <div class="slider-hidden">
+                <div class="slider">
+                    <div class="slider-description">
+                        <p class="slider-main">Долго, дорого, скрупулезно.</p>
+                        <h2 class="slider-header">Математически выверенный дизайн <br>для вашего сайта или мобильного приложения. </h2>
+                        <a class="button" href="# ">Узнать больше</a>
+                    </div>
+                    <img src="img/slider_mobile.png" alt="Слайдер" width="760" height="431">
+                </div>
             </div>
-            <img src="img/slider_mobile.png" alt="Слайдер" width="760" height="431">
+            <div class="slider-hidden">
+                <div class="slider">
+                    <div class="slider-description">
+                        <p class="slider-main">Любим математику <br> как никто другой</p>
+                        <h2 class="slider-header">Никакого креатива, только математические формулы <br> для расчета идеальных пропорций</h2>
+                        <a class="button" href="# ">Узнать больше</a>
+                    </div>
+                    <img src="img/nerds-index-slide2.png" alt="Слайдер" width="760" height="431">
+                </div>
+            </div>
+            <div class="slider-visible">
+                <div class="slider ">
+                    <div class="slider-description third-slide">
+                        <p class="slider-main">Только ночь, только хардкор</p>
+                        <h2 class="slider-header">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</h2>
+                        <a class="button" href="# ">Узнать больше</a>
+                    </div> <img src="img/nerds-index-slide3.png" alt="Слайдер" width="760" height="431">
+                </div>
+
+            </div>
         </div>
         <div class="flex-container">
             <h1 style="display: none;">Дизайн-студия "Нёрдс "</h1>
@@ -117,24 +141,26 @@
             </div>
         </div>
         <div class="contact-wrapper">
-            <div class="modal-wrapper">
-                <div class="modal-form">
-                    <h1>Напишите нам</h1>
-                    <form class="form-flex" method="GET" action="https://echo.htmlacademy.ru">
-                        <fieldset class="modal-fieldset">
-                            <legend>Ваше имя:</legend>
-                            <input class="name-form form-input" type="text" placeholder="Имя Фамилия" id="customer-name" name="name"></fieldset>
-                        </fieldset>
-                        <fieldset class="modal-fieldset">
-                            <legend>Ваш email:</legend>
-                            <input class="mail-form form-input" type="text" placeholder="email@example.com" id="customer-mail" name="mail"></fieldset>
-                        </fieldset>
-                        <fieldset class="modal-fieldset">
-                            <legend>Текст письма:</legend>
-                            <textarea class="text-form form-input" type="text" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
-                        </fieldset>
-                        <button class="button modal-button">Отправить</button>
-                    </form>
+            <div class="hidden">
+                <div class="modal-wrapper">
+                    <div class="modal-form">
+                        <h1>Напишите нам</h1>
+                        <form class="form-flex" method="GET" action="https://echo.htmlacademy.ru">
+                            <fieldset class="modal-fieldset">
+                                <legend>Ваше имя:</legend>
+                                <input class="name-form form-input" type="text" placeholder="Имя Фамилия" id="customer-name" name="name"></fieldset>
+                            </fieldset>
+                            <fieldset class="modal-fieldset">
+                                <legend>Ваш email:</legend>
+                                <input class="mail-form form-input" type="text" placeholder="email@example.com" id="customer-mail" name="mail"></fieldset>
+                            </fieldset>
+                            <fieldset class="modal-fieldset">
+                                <legend>Текст письма:</legend>
+                                <textarea class="text-form form-input" type="text" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
+                            </fieldset>
+                            <button class="button modal-button">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="map-marker">
@@ -155,11 +181,11 @@
         <div class="flex-container">
             <div class="social-footer">
                 <section class="icons-social-flex">
-                    <a href="https://vk.com/htmlacademy ">
+                    <a class="social-icon" href="https://vk.com/htmlacademy ">
                         <img src="img/vk-ico.svg " alt="Вконтакте "></a>
-                    <a href="https://www.facebook.com/htmlacademy/ ">
+                    <a class="social-icon" href="https://www.facebook.com/htmlacademy/ ">
                         <img src="img/fb-ico.svg " alt="Facebook "></a>
-                    <a href="https://www.instagram.com/htmlacademy/ ">
+                    <a class="social-icon" href="https://www.instagram.com/htmlacademy/ ">
                         <img src="img/insta-ico.svg " alt="Instagram "></a>
                 </section>
                 <article class="social-description-article">
