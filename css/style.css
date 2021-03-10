@@ -16,7 +16,9 @@
     --shadow: rgba(0, 1, 1, 0.1);
     --grey: #A6A6A6;
     --browser-inactive: #4d4d4d, 0.12;
-    --browser-hover: #4d4d4d;
+    --browser-hover: #4d4d4d, 1;
+    --input-border:#D7DCDE;
+    --range:#f1f1f1;
 }
 
 
@@ -69,7 +71,7 @@ li {
 .header-grid {
     grid-row: 1/1;
     justify-content: center;
-    background-color: #eeeeee;
+    background-color:var(--nav-color);
 }
 
 .main-grid {
@@ -381,14 +383,24 @@ li {
 }
 
 .catalog-item {
-    display: flex;
+    display: grid;
     margin-right: 42px;
     margin-bottom: 31px;
-    position: relative;
+grid-template-columns: auto;
+grid-template-rows: 1fr minmax(min-content,360px);
+background-image: url(../img/browser.svg);
+background-repeat: no-repeat;
+background-color: var(--browser-inactive);
+padding-top: 40px;
 }
 
+.catalog-item:hover {
+    background-image: url(../img/browser-hover.svg);}
 
-/* Кнопки */
+.catalog-item a {
+    text-align: center;
+}
+    /* Кнопки */
 
 .button {
     color: var(--background);
@@ -719,7 +731,7 @@ li {
 }
 
 .form-input {
-    border: 2px solid #D7DCDE;
+    border: 2px solid var(--input-border);
     border-radius: 3px;
 }
 
@@ -781,11 +793,11 @@ li {
 }
 
 .social-icon:hover {
-    background-color: #E74246;
+    background-color:var(--hover-red-nav);
 }
 
 .social-icon:active {
-    background-color: #D7373B;
+    background-color: var(--active-red-nav);
     box-shadow: 0px 3px 0px 0px #000101 10% inset;
     color: var(--background) 0.3;
 }
@@ -843,13 +855,13 @@ a .browser:hover {
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color: #f1f1f1;
+    background-color:var(--range);
     border-radius: 5px;
 }
 
 .range-controls .scale {
     height: 2px;
-    background: #d7dcde;
+    background: var(--input-border);
 }
 
 .range-controls .bar {
@@ -903,18 +915,28 @@ a .browser:hover {
     font-family: inherit;
     font-size: inherit;
 }
-
+.item-img {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: -1;
+}
 .item-info {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
     display: flex;
     background-color: var(--nav-color);
     flex-direction: column;
     padding: 26px 52px 44px;
     width: 360px;
     height: 231px;
-    align-content: center;
-    justify-items: center;
-    z-index: 10;
+    align-self: flex-end;
+    z-index: -1;
     box-sizing: border-box;
+    text-overflow: auto;
+}
+
+.catalog-item:hover .item-info{
+z-index: 3;
 }
 
 .item-button {
@@ -936,3 +958,8 @@ a .browser:hover {
     background-color: var(--active-red-nav);
     box-shadow: inset 0px 3px 0px var(--shadow);
 }
+
+.social-shadow:active {
+    opacity: 0.12;
+}
+
