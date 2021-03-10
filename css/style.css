@@ -17,8 +17,8 @@
     --grey: #A6A6A6;
     --browser-inactive: #4d4d4d, 0.12;
     --browser-hover: #4d4d4d, 1;
-    --input-border:#D7DCDE;
-    --range:#f1f1f1;
+    --input-border: #D7DCDE;
+    --range: #f1f1f1;
 }
 
 
@@ -71,7 +71,7 @@ li {
 .header-grid {
     grid-row: 1/1;
     justify-content: center;
-    background-color:var(--nav-color);
+    background-color: var(--nav-color);
 }
 
 .main-grid {
@@ -386,21 +386,33 @@ li {
     display: grid;
     margin-right: 42px;
     margin-bottom: 31px;
-grid-template-columns: auto;
-grid-template-rows: 1fr minmax(min-content,360px);
-background-image: url(../img/browser.svg);
-background-repeat: no-repeat;
-background-color: var(--browser-inactive);
-padding-top: 40px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr minmax(min-content, 360px);
+    background-image: url(../img/browser.svg);
+    background-repeat: no-repeat;
+    background-color: var(--browser-inactive);
+    padding-top: 40px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 .catalog-item:hover {
-    background-image: url(../img/browser-hover.svg);}
+    background-image: url(../img/browser-hover.svg);
+}
 
 .catalog-item a {
     text-align: center;
+    color: var(--basic-black);
 }
-    /* Кнопки */
+
+.catalog-item p {
+    line-height: 18px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+/* Кнопки */
 
 .button {
     color: var(--background);
@@ -596,7 +608,11 @@ padding-top: 40px;
 
 /* Input */
 
-.check-box {}
+.check-box {
+    list-style: none;
+}
+
+.check-box::before {}
 
 .input-number {
     width: 80px;
@@ -793,7 +809,7 @@ padding-top: 40px;
 }
 
 .social-icon:hover {
-    background-color:var(--hover-red-nav);
+    background-color: var(--hover-red-nav);
 }
 
 .social-icon:active {
@@ -855,7 +871,7 @@ a .browser:hover {
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color:var(--range);
+    background-color: var(--range);
     border-radius: 5px;
 }
 
@@ -915,18 +931,22 @@ a .browser:hover {
     font-family: inherit;
     font-size: inherit;
 }
+
 .item-img {
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: -1;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
+
 .item-info {
     grid-column: 1/-1;
     grid-row: 2/-1;
     display: flex;
     background-color: var(--nav-color);
     flex-direction: column;
-    padding: 26px 52px 44px;
+    padding: 15px 52px 44px;
     width: 360px;
     height: 231px;
     align-self: flex-end;
@@ -935,8 +955,8 @@ a .browser:hover {
     text-overflow: auto;
 }
 
-.catalog-item:hover .item-info{
-z-index: 3;
+.catalog-item:hover .item-info {
+    z-index: 3;
 }
 
 .item-button {
@@ -962,4 +982,3 @@ z-index: 3;
 .social-shadow:active {
     opacity: 0.12;
 }
-
