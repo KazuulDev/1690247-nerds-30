@@ -247,6 +247,7 @@ li {
     width: 1160px;
     box-sizing: content-box;
     background-repeat: no-repeat;
+    background-position-x: 423px;
 }
 
 .slider-description {
@@ -380,6 +381,7 @@ li {
 }
 
 .catalog-item {
+    display: flex;
     margin-right: 42px;
     margin-bottom: 31px;
     position: relative;
@@ -804,20 +806,14 @@ a .browser:hover {
 
 .first-slide {
     background-image: url(../img/slider_mobile.png);
-    background-position: right;
-    background-size: initial;
 }
 
 .second-slide {
     background-image: url(../img/nerds-index-slide2.png);
-    background-position-x: right;
-    background-size: initial;
 }
 
 .third-slide {
     background-image: url(../img/nerds-index-slide3.png);
-    background-position-x: right;
-    background-size: initial;
 }
 
 .filter-item {
@@ -912,20 +908,21 @@ a .browser:hover {
     display: flex;
     background-color: var(--nav-color);
     flex-direction: column;
-    padding: 26px 80px 44px 80px;
+    padding: 26px 52px 44px;
     width: 360px;
     height: 231px;
     align-content: center;
-    justify-content: center;
-    margin-bottom: -400px;
-    z-index: 1;
+    justify-items: center;
+    z-index: 10;
+    box-sizing: border-box;
 }
 
 .item-button {
     color: var(--background);
     background-color: var(--red-nav);
     border-radius: 3px;
-    padding: 15px 72px 17px 72px;
+    padding-top: 15px;
+    padding-bottom: 17px;
     line-height: 18px;
     border: none;
     outline: none;
