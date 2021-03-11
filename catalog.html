@@ -23,11 +23,11 @@
                 <ul class="ul-nav-flex">
                     <li><a class="li-nav-flex" href="index.html">Cтудия</a></li>
                     <li><a class="li-nav-flex" href="blanc.html">Клиенты</a></li>
-                    <li><a class="li-nav-flex" href="catalog.html">Магазин</a></li>
+                    <li><a class="li-nav-flex current-page" href="catalog.html">Магазин</a></li>
                     <li><a class="li-nav-flex" href="blanc.html">Контакты</a></li>
                 </ul>
                 <p>
-                    <a class="user-nav-flex current-page " href=" blanc.html "><img class="nav-cart" src="img/cart-icon.svg " alt="cart-icon ">Корзина</a>
+                    <a class="user-nav-flex" href=" blanc.html "><img class="nav-cart" src="img/cart-icon.svg " alt="cart-icon ">Корзина</a>
                 </p>
             </nav>
             <h1 class="page-description">Магазин готовых шаблонов</h1>
@@ -39,33 +39,33 @@
             <form method="GET" action="https://echo.htmlacademy.ru">
                 <fieldset class="filter-item">
                     <legend>Стоимость:</legend>
-                    <div class="range-filter">
+                    <div class=" range-filter">
                         <div class="range-controls">
-                            <div class="scale">
-                                <div class="bar"></div>
+                            <div class="scale ">
+                                <div class="bar "></div>
                             </div>
                             <div class="toggle toggle-min"></div>
                             <div class="toggle toggle-max"></div>
                         </div>
-                        <div class="price-controls">
-                            <label class="min-price">
-                      от <input type="number" name="min-price" value="0">
+                        <div class="price-controls ">
+                            <label class="min-price ">
+                      от <input type="number " name="min-price " value="0 ">
                     </label>
-                            <label class="max-price">
-                      до <input type="number" name="max-price" value="15000">
+                            <label class="max-price ">
+                      до <input type="number " name="max-price " value="15000 ">
                     </label>
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="aside-fieldset ">
-                    <legend class="filter-legend ">Сетка:</legend>
-                    <ul class="grid ">
+                <fieldset class="filter-item">
+                    <legend class="filter-legend">Сетка:</legend>
+                    <ul class="grid">
                         <li>
-                            <input type="radio" name="grid_type" value="adapt " id="grid_adapt " checked>
+                            <input type="radio" name="grid_type" value="adapt" id="grid_adapt" checked>
                             <label for="grid_adapt">Адаптивная</label>
                         </li>
                         <li>
-                            <input type="radio" name="grid_type" value="fix " id="grid_fix ">
+                            <input type="radio" name="grid_type" value="fix" id="grid_fix">
                             <label for="grid_fix">Фиксированная</label>
                         </li>
                         <li>
@@ -74,105 +74,106 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset class="aside-fieldset">
+                <fieldset class="filter-item">
                     <legend class="filter-legend">Особенности</legend>
-                    <ul class="grid">
+                    <ul class="grid ">
                         <li>
-                            <input class="check-box" type="checkbox" name="slider " value="slider " id="specs_slider ">
+                            <input class="check-box" type="checkbox" name="slider " value="slider" id="specs_slider">
                             <label for="specs_slider">Слайдер</label>
                         </li>
                         <li>
-                            <input class="check-box" type="checkbox" name="advantages " value="advantages " id="specs_adv ">
+                            <input class="check-box" type="checkbox" name="advantages" value="advantages" id="specs_adv">
                             <label for="specs_adv">Блок преимуществ</label>
                         </li>
                         <li>
-                            <input class="check-box" type="checkbox" name="news " value="news " id="specs_news ">
+                            <input class="check-box" type="checkbox" name="news" value="news" id="specs_news">
                             <label for="specs_news">Новости</label>
                         </li>
                         <li>
-                            <input class="check-box" type="checkbox" name="gallery " value="gallery " id="specs_gallery ">
+                            <input class="check-box" type="checkbox" name="gallery" value="gallery" id="specs_gallery">
                             <label for="specs_gallery">Галерея</label>
                         </li>
                         <li>
-                            <input class="check-box" type="checkbox" name="bin " value="bin " id="specs_bin ">
+                            <input class="check-box" type="checkbox" name="bin" value="bin" id="specs_bin">
                             <label for="specs_bin">Корзина</label>
                         </li>
                     </ul>
                 </fieldset>
-                <button class="submit" type="submit ">Показать</button>
+                <button class="submit " type="submit ">Показать</button>
             </form>
         </aside>
-
-        <section class="catalog-items shop-flex">
-            <div class="filter-wrapper">
+        <section class="catalog-items shop-flex ">
+            <div class="filter-wrapper ">
                 <span class="filter-legend ">Сортировать:</span>
-                <a href="# " class="filter ">По цене</a>
-                <a href="# " class="filter ">По типу</a>
-                <a href="# " class="filter ">По названию</a>
-                <a href="# "><img src="img/icon-down-dir.svg " alt="Сортировка по убыванию "></a>
-                <a href="# "><img src="img/icon-up-dir.svg " alt="Сортировка по возрастанию "></a>
+                <div>
+                    <a href="#" class="filter ">По цене</a>
+                    <a href="#" class="filter ">По типу</a>
+                    <a href="#" class="filter ">По названию</a>
+                    <a href="#"><img src="img/icon-down-dir.svg " alt="Сортировка по убыванию "></a>
+                    <a href="#"><img src="img/icon-up-dir.svg " alt="Сортировка по возрастанию "></a>
+                </div>
             </div>
             <h2 style="display: none; ">Шаблоны сайтов</h2>
             <div class="catalog-page ">
                 <div class="catalog-item ">
-                    <div class="item-info">
+                    <div class="item-info ">
                         <a href="blank.html ">
                             <h3>Sedona</h3>
                         </a>
                         <p>Информационный сайт <br> для туристов</p>
-                        <button class="item-button">9 900 ₽</button>
+                        <button class="item-button ">9 900 ₽</button>
                     </div>
-                    <img class="item-img" src="img/img-sedona.png" width="359" height="578 " alt="SEDONA ">
+                    <img class="item-img " src="img/sedona.png " width="359 " height="578 " alt="SEDONA ">
                 </div>
                 <div class="catalog-item ">
-                    <div class="item-info">
+                    <div class="item-info ">
                         <a href="blank.html ">
                             <h3>Pink App</h3>
                         </a>
                         <p>Продуктовый лендинг приложения для iOS и Android</p>
-                        <button class="item-button">9 900 ₽</button>
+                        <button class="item-button ">9 900 ₽</button>
                     </div>
-                    <img class="item-img" src="img/img-pink.png " width="359 " height="578 " alt="Pink ">
+                    <img class="item-img " src="img/pink.png " width="359 " height="578 " alt="Pink ">
                 </div>
-                <div class="catalog-item">
-                    <div class="item-info">
-                        <a href="blank.html">
+                <div class="catalog-item ">
+                    <div class="item-info ">
+                        <a href="blank.html ">
                             <h3>Barbershop</h3>
                         </a>
                         <p>Сайт салона красоты. <br> Для мужчин, да.</p>
-                        <button class="item-button">9 900 ₽</button>
+                        <button class="item-button ">9 900 ₽</button>
                     </div>
-                    <img class="item-img" src="img/img-barbershop.png " width="359 " height="578 " alt="Barbershop ">
+                    <img class="item-img " src="img/barbershop.png " width="359 " height="578 " alt="Barbershop ">
                 </div>
-                <div class="catalog-item">
-                    <div class="item-info">
-                        <a href="blank.html">
+                <div class="catalog-item ">
+                    <div class="item-info ">
+                        <a href="blank.html ">
                             <h3>MISHKA</h3>
                         </a>
                         <p>Интернет-магазин <br> вязаных игрушек</p>
-                        <button class="item-button">9 900 ₽</button>
+                        <button class="item-button ">9 900 ₽</button>
                     </div>
-                    <img class="item-img" src="img/img-mishka.png" width="359 " height="578" alt="Mishka">
+                    <img class="item-img " src="img/mishka.png " width="359 " height="578 " alt="Mishka ">
                 </div>
                 <div class="catalog-item ">
-                    <div class="item-info">
+                    <div class="item-info ">
                         <a href="blank.html ">
                             <h3>A Plus</h3>
                         </a>
                         <p>Лендинг курсов повышения квалификации</p>
-                        <button class="item-button">9 900 ₽</button>
+                        <button class="item-button ">9 900 ₽</button>
                     </div>
-                    <img class="item-img" src="img/img-aplus.png" width="359" height="578" alt="APlus">
+                    <img class="item-img " src="img/aplus.png " width="359 " height="578 " alt="APlus ">
                 </div>
-                <div class="catalog-item">
-                    <div class="item-info">
-                        <a href="blank.html">
+                <div class="catalog-item ">
+                    <div class="item-info ">
+                        <a href="blank.html ">
                             <h3>КВАСТ</h3>
                         </a>
                         <p>Промо-сайт производителя <br> крафтового кваса</p>
-                        <button class="item-button">9 900 ₽</button>
+                        <button class="item-button ">9 900 ₽</button>
                     </div>
-                    <img src="img/img-kvast.png" width="359" height="578" alt="Kvast">
+                    <img src="img/kvast.png " width="359 " height="578 " alt="Kvast ">
                 </div>
             </div>
             <ul>
@@ -193,20 +194,20 @@
 
 
     </main>
-    <footer class="footer-grid">
-        <div class="flex-container">
-            <div class="social-footer">
-                <section class="icons-social-flex">
-                    <a class="social-icon" href="https://vk.com/htmlacademy ">
-                        <img class="social-shadow" src="img/vk-ico.svg " alt="Вконтакте "></a>
-                    <a class="social-icon" href="https://www.facebook.com/htmlacademy/ ">
-                        <img class="social-shadow" src="img/fb-ico.svg " alt="Facebook "></a>
-                    <a class="social-icon" href="https://www.instagram.com/htmlacademy/ ">
-                        <img class="social-shadow" src="img/insta-ico.svg " alt="Instagram "></a>
+    <footer class="footer-grid ">
+        <div class="flex-container ">
+            <div class="social-footer ">
+                <section class="icons-social-flex ">
+                    <a class="social-icon " href="https://vk.com/htmlacademy ">
+                        <img class="social-shadow " src="img/vk-ico.svg " alt="Вконтакте "></a>
+                    <a class="social-icon " href="https://www.facebook.com/htmlacademy/ ">
+                        <img class="social-shadow " src="img/fb-ico.svg " alt="Facebook "></a>
+                    <a class="social-icon " href="https://www.instagram.com/htmlacademy/ ">
+                        <img class="social-shadow " src="img/insta-ico.svg " alt="Instagram "></a>
                 </section>
-                <article class="social-description-article">
-                    <h2 class="social-header">Давайте дружить, это выгодно!</h2>
-                    <p class="social-description"> Скидка 10% для друзей из социальных сетей.</p>
+                <article class="social-description-article ">
+                    <h2 class="social-header ">Давайте дружить, это выгодно!</h2>
+                    <p class="social-description "> Скидка 10% для друзей из социальных сетей.</p>
                 </article>
             </div>
         </div>

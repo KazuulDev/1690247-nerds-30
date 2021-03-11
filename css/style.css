@@ -19,6 +19,7 @@
     --browser-hover: #4d4d4d, 1;
     --input-border: #D7DCDE;
     --range: #f1f1f1;
+    --border-item: #f2f2f2;
 }
 
 
@@ -49,7 +50,9 @@ li {
     list-style: none;
 }
 
-.slider-visible {}
+.slider-visible {
+    display: visible;
+}
 
 .slider-hidden {
     display: none;
@@ -265,10 +268,10 @@ li {
 
 .aside-flex {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     width: 300px;
     flex-direction: column;
-    padding-top: 55px;
+    padding-top: 7px;
 }
 
 .shop-flex {
@@ -277,6 +280,7 @@ li {
     width: 900px;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-left: 100px;
 }
 
 .filter-wrapper {
@@ -285,6 +289,8 @@ li {
     align-items: center;
     margin-top: 55px;
     margin-bottom: 48px;
+    justify-content: space-between;
+    margin-right: 140px;
 }
 
 .filter-wrapper a {
@@ -392,8 +398,6 @@ li {
     background-repeat: no-repeat;
     background-color: var(--browser-inactive);
     padding-top: 40px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
 }
 
 .catalog-item:hover {
@@ -600,19 +604,50 @@ li {
     outline: none;
 }
 
-.aside-fieldset {
-    border: none;
-    padding-left: 0;
-}
-
 
 /* Input */
 
 .check-box {
-    list-style: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.check-box::before {}
+.check-box label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* это не работает */
+
+.check-box::before {
+    position: absolute;
+    background-image: url(../img/checkbox-off.svg);
+}
+
+
+/* это тоже не работает */
+
+.check-box+label::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    border: solid 3px var(--red-nav) radius 2px;
+    opacity: 0.4;
+    color: var(--background);
+    margin-left: -40px;
+}
 
 .input-number {
     width: 80px;
@@ -845,11 +880,19 @@ a .browser:hover {
 }
 
 .filter-item {
-    margin: 0;
+    margin: 50px 0px 57px;
     padding: 0;
     border: none;
     width: 260px;
-    margin: 50px auto;
+    justify-self: flex-start;
+}
+
+.filter-item ul {
+    padding: 5px 0 0 0;
+}
+
+.grid li:not(:first-child) {
+    margin-top: 20px;
 }
 
 .range-filter {
@@ -933,11 +976,15 @@ a .browser:hover {
 }
 
 .item-img {
+    display: flex;
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: -1;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border: solid 1px var(--border-item);
+    border-top: 0px;
+    box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .item-info {
@@ -953,6 +1000,17 @@ a .browser:hover {
     z-index: -1;
     box-sizing: border-box;
     text-overflow: auto;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.item-info a:hover {
+    color: var(--red-nav)
+}
+
+.item-info a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .catalog-item:hover .item-info {
