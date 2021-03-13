@@ -406,7 +406,8 @@ li {
     border-bottom-right-radius: 5px;
 }
 
-.catalog-item:hover .catalog-item:focus-within {
+.catalog-item:hover,
+.catalog-item:focus-within {
     background-image: url(../img/browser-hover.svg);
     box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
 }
@@ -914,20 +915,6 @@ li {
     opacity: 0.3;
 }
 
-.browser {
-    margin-top: -40px;
-    position: absolute;
-    border-radius: top 3px;
-    background-color: var(--browser-inactive);
-    color: var(--background);
-}
-
-a .browser:hover {
-    border-radius: top 3px;
-    background-color: var(--browser-hover);
-    color: var(--background);
-}
-
 .first-slide {
     background-image: url(../img/slider_mobile.png);
 }
@@ -1118,7 +1105,6 @@ a .browser:hover {
 }
 
 .pagination-list a {
-    color: var(--basic-black);
     box-sizing: border-box;
     display: inline-block;
     vertical-align: baseline;
@@ -1129,31 +1115,35 @@ a .browser:hover {
     text-align: center;
     text-decoration: none;
     border-radius: 3px;
+    color: hsl(0deg 0% 0% / var(--text-o, 1));
     background-color: hsl(0deg 0% var(--bg-s, 93%) / var(--bg-o, 1));
-    box-shadow: 0px 3px 0px 0px #000101 10% inset;
+    box-shadow: inset var(--shadow-offset-x, 0px) var(--shadow-offset-y, 0px) var(--shadow-blur-radius, 0px) var(--shadow-spread, 3px) hsl(0deg 0% var(--shadow-s, 86%) / var(--shadow-o, 0));
 }
 
-.pagination-list a {
-    color: var(--basic-black);
+.pagination-list a:hover {
+    --bg-s: 87%;
 }
 
-.page-counter a {
-    width: 50px;
+.pagination-list a:active {
+    --text-o: 0.3;
+    --bg-s: 84%;
+    --shadow-offset-y: 3px;
+    --shadow-spread: 0px;
+    --shadow-s: 75%;
+    --shadow-o: 1;
 }
 
-.further-pages a {
-    width: 260px;
+.current-list {
+    --shadow-s: 86%;
+    --shadow-o: 1;
+    --bg-o: 0.0001;
 }
 
-.other-page a {
-    background-color: var(--nav-color);
+.pagination-list a:focus {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
 }
 
-.current-list a {
-    width: 50px;
-    border: 3px;
-}
-
-.page-next a {
-    width: 260px;
+.further-list {
+    width: 260px
 }
