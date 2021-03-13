@@ -195,6 +195,7 @@ li {
     padding-left: 32px;
     padding-right: 42px;
     padding-bottom: 44px;
+    margin-bottom: 30px;
 }
 
 .partners a {
@@ -254,12 +255,8 @@ li {
     width: 1160px;
     box-sizing: content-box;
     background-repeat: no-repeat;
-    background-position-x: 423px;
-}
-
-.slider-description {
-    width: 400px;
-    margin-top: px;
+    background-position-x: 428px;
+    background-position-y: -4px;
 }
 
 .nav-cart {
@@ -498,17 +495,29 @@ li {
 }
 
 .slider-main {
-    font-weight: 500;
+    width: 538px;
+    margin: 0;
+    padding: 0;
     font-size: 55px;
-    line-height: 100%;
+    line-height: 55px;
+    font-weight: 500;
     color: var(--basic-black);
     margin-top: 75px;
 }
 
-.slider-header {
-    font: inherit;
-    margin-bottom: 53px;
-    margin-top: -30px;
+.first-slide .slider-text {
+    margin-top: 25px;
+    margin-bottom: 55px;
+}
+
+.second-slide .slider-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.third-slide .slider-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .product {
@@ -917,10 +926,14 @@ li {
 
 .first-slide {
     background-image: url(../img/slider_mobile.png);
+    background-position-x: 425px;
+    background-position-y: 0px;
 }
 
 .second-slide {
     background-image: url(../img/nerds-index-slide2.png);
+    background-position-x: 428px;
+    background-position-y: -4px;
 }
 
 .third-slide {
