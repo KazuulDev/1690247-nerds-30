@@ -177,24 +177,58 @@
                 </div>
             </div>
             <ul class="pagination-list">
-                <li>
+                <li class="page-counter current-list">
                     <a>1</a>
                 </li>
-                <li>
-                    <a href="# ">2</a>
+                <li class="page-counter other-page">
+                    <a href="#">2</a>
                 </li>
-                <li>
-                    <a href="# ">3</a>
+                <li class="page-counter other-page">
+                    <a href="#">3</a>
                 </li>
-                <li>
-                    <a href="# ">Следующая</a>
+                <li class="further-pages">
+                    <a href="#">Следующая</a>
                 </li>
             </ul>
         </section>
-
-
     </main>
     <footer class="footer-grid ">
+        <div class="contact-wrapper ">
+            <div class="hidden ">
+                <div class="modal-wrapper ">
+                    <div class="modal-form ">
+                        <h1>Напишите нам</h1>
+                        <form class="form-flex " method="GET " action="https://echo.htmlacademy.ru ">
+                            <fieldset class="modal-fieldset ">
+                                <legend>Ваше имя:</legend>
+                                <input class="name-form form-input " type="text " placeholder="Имя Фамилия " id="customer-name " name="name "></fieldset>
+                            </fieldset>
+                            <fieldset class="modal-fieldset ">
+                                <legend>Ваш email:</legend>
+                                <input class="mail-form form-input " type="text " placeholder="email@example.com " id="customer-mail " name="mail "></fieldset>
+                            </fieldset>
+                            <fieldset class="modal-fieldset ">
+                                <legend>Текст письма:</legend>
+                                <textarea class="text-form form-input " type="text " placeholder="В свободной форме " id="customer-text " name="text " cols="30 " rows="10 "></textarea>
+                            </fieldset>
+                            <button class="button modal-button ">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="map-marker ">
+                <img src="img/map-marker.svg " alt="ул. Б. Конюшенная, д. 19/8 " width="231 " height="190 ">
+            </div>
+            <div class="contact ">
+                <h2 class="about-article ">NЁRDS DESIGN STUDIO</h2>
+                <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+                <p>тел. +7 (812) 275-75-75</p>
+                <a class="button " href="# ">Напишите нам</a>
+            </div>
+            <div class="yandex-map ">
+                <iframe class="yandex-map " src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e0ad25869030631fcf4a24c7ff3788aab9fd70ca8e3dbb982a97f3f14829a68&amp;source=constructor "></iframe>
+            </div>
+        </div>
         <div class="flex-container ">
             <div class="social-footer ">
                 <section class="icons-social-flex ">

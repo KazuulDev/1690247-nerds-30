@@ -19,7 +19,9 @@
     --browser-hover: #4d4d4d, 1;
     --input-border: #D7DCDE;
     --range: #f1f1f1;
+    --input-grey: #ababab;
     --border-item: #f2f2f2;
+    --input-shadow: #cfcfcf;
 }
 
 
@@ -269,6 +271,7 @@ li {
 .aside-flex {
     display: flex;
     justify-content: flex-start;
+    align-content: flex-start;
     width: 300px;
     flex-direction: column;
     padding-top: 7px;
@@ -301,7 +304,6 @@ li {
 .catalog-page {
     display: flex;
     flex-wrap: wrap;
-    height: 1900px;
 }
 
 .main-nav {
@@ -398,10 +400,15 @@ li {
     background-repeat: no-repeat;
     background-color: var(--browser-inactive);
     padding-top: 40px;
+    border: solid 1px var(--border-item);
+    border-top: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.catalog-item:hover {
+.catalog-item:hover .catalog-item:focus-within {
     background-image: url(../img/browser-hover.svg);
+    box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
 }
 
 .catalog-item a {
@@ -602,12 +609,26 @@ li {
     line-height: 18px;
     border: none;
     outline: none;
+    margin-top: 30px;
 }
 
 
 /* Input */
 
 .check-box {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.radio-button {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -627,26 +648,63 @@ li {
     user-select: none;
 }
 
-
-/* это не работает */
-
-.check-box::before {
-    position: absolute;
-    background-image: url(../img/checkbox-off.svg);
+.radio-button label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
 }
-
-
-/* это тоже не работает */
 
 .check-box+label::before {
     position: absolute;
     content: "";
-    width: 23px;
-    height: 23px;
-    border: solid 3px var(--red-nav) radius 2px;
+    width: 27px;
+    height: 27px;
     opacity: 0.4;
     color: var(--background);
-    margin-left: -40px;
+    margin-left: -41px;
+    margin-top: -3px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+}
+
+.radio-button+label::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 27px;
+    opacity: 0.4;
+    color: var(--background);
+    margin-left: -38px;
+    margin-top: -6px;
+    background-image: url(../img/radio-off.svg);
+    background-repeat: no-repeat;
+}
+
+.check-box:checked+label::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 27px;
+    opacity: 0.4;
+    color: var(--background);
+    margin-left: -41px;
+    margin-top: -3px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+}
+
+.radio-button:checked+label::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 27px;
+    opacity: 0.4;
+    color: var(--background);
+    margin-left: -38px;
+    margin-top: -6px;
+    background-image: url(../img/radio-on.svg);
+    background-repeat: no-repeat;
 }
 
 .input-number {
@@ -666,7 +724,7 @@ li {
 .contact-wrapper {
     display: flex;
     height: 416px;
-    margin-top: 80px;
+    margin-top: 50px;
     align-content: center;
     position: relative;
 }
@@ -850,7 +908,10 @@ li {
 .social-icon:active {
     background-color: var(--active-red-nav);
     box-shadow: 0px 3px 0px 0px #000101 10% inset;
-    color: var(--background) 0.3;
+}
+
+.social-icon:active img {
+    opacity: 0.3;
 }
 
 .browser {
@@ -880,15 +941,20 @@ a .browser:hover {
 }
 
 .filter-item {
-    margin: 50px 0px 57px;
-    padding: 0;
+    margin-top: 56px;
+    margin-left: 0px;
+    padding: 0px;
     border: none;
     width: 260px;
     justify-self: flex-start;
 }
 
+.specs {
+    margin-top: 30px;
+}
+
 .filter-item ul {
-    padding: 5px 0 0 0;
+    padding: 5px 0 0 35px;
 }
 
 .grid li:not(:first-child) {
@@ -897,7 +963,7 @@ a .browser:hover {
 
 .range-filter {
     width: 260px;
-    margin-top: 49px;
+    margin-top: 48px;
 }
 
 .filter-item legend {
@@ -926,7 +992,7 @@ a .browser:hover {
 .range-controls .bar {
     width: 70%;
     height: 2px;
-    background: #00ca74;
+    background: var(--green);
 }
 
 .range-controls .toggle {
@@ -936,10 +1002,10 @@ a .browser:hover {
     width: 4px;
     height: 4px;
     padding: 0;
-    border: 8px solid #ffffff;
-    background-color: #ababab;
+    border: 8px solid var(--background);
+    background-color: var(--input-grey);
     border-radius: 50%;
-    box-shadow: 0 2px 1px 0 #cfcfcf;
+    box-shadow: 0 2px 1px 0 var(--input-shadow);
     cursor: pointer;
 }
 
@@ -967,10 +1033,10 @@ a .browser:hover {
     padding: 10px;
     margin-left: 10px;
     text-align: center;
-    color: #283136;
+    color: var(--non-basic-black);
     border: none;
     border-radius: 5px;
-    background: #f1f1f1;
+    background-color: var(--range);
     font-family: inherit;
     font-size: inherit;
 }
@@ -982,7 +1048,6 @@ a .browser:hover {
     z-index: -1;
     border: solid 1px var(--border-item);
     border-top: 0px;
-    box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -1013,7 +1078,8 @@ a .browser:hover {
     opacity: 0.3;
 }
 
-.catalog-item:hover .item-info {
+.catalog-item:hover .item-info,
+.catalog-item:focus-within .item-info {
     z-index: 3;
 }
 
@@ -1026,6 +1092,9 @@ a .browser:hover {
     line-height: 18px;
     border: none;
     outline: none;
+    width: 200px;
+    align-self: center;
+    margin-top: 12px;
 }
 
 .item-button:hover {
@@ -1039,4 +1108,52 @@ a .browser:hover {
 
 .social-shadow:active {
     opacity: 0.12;
+}
+
+.pagination-list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    gap: 11px
+}
+
+.pagination-list a {
+    color: var(--basic-black);
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: baseline;
+    min-width: 50px;
+    padding: 17px 20px 15px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: hsl(0deg 0% var(--bg-s, 93%) / var(--bg-o, 1));
+    box-shadow: 0px 3px 0px 0px #000101 10% inset;
+}
+
+.pagination-list a {
+    color: var(--basic-black);
+}
+
+.page-counter a {
+    width: 50px;
+}
+
+.further-pages a {
+    width: 260px;
+}
+
+.other-page a {
+    background-color: var(--nav-color);
+}
+
+.current-list a {
+    width: 50px;
+    border: 3px;
+}
+
+.page-next a {
+    width: 260px;
 }
