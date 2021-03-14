@@ -105,7 +105,7 @@
         <section class="catalog-items shop-flex">
             <div class="filter-wrapper">
                 <span class="filter-legend">Сортировать:</span>
-                <div>
+                <div class="items-sorting">
                     <a href="#" class="filter">По цене</a>
                     <a href="#" class="filter">По типу</a>
                     <a href="#" class="filter">По названию</a>
@@ -198,18 +198,19 @@
                 <div class="modal-wrapper">
                     <div class="modal-form">
                         <h1>Напишите нам</h1>
+                        <button class="modal-escape" aria-label="Закрыть форму обратной связи"></button>
                         <form class="form-flex" method="GET" action="https://echo.htmlacademy.ru">
                             <fieldset class="modal-fieldset">
                                 <legend>Ваше имя:</legend>
-                                <input class="name-form form-input" type="text" placeholder="Имя Фамилия" id="customer-name" name="name"></fieldset>
+                                <input class="name-form form-input" type="text" placeholder="Имя Фамилия" id="customer-name" name="name">
                             </fieldset>
                             <fieldset class="modal-fieldset">
                                 <legend>Ваш email:</legend>
-                                <input class="mail-form form-input" type="text" placeholder="email@example.com" id="customer-mail" name="mail"></fieldset>
+                                <input class="mail-form form-input" type="text" placeholder="email@example.com" id="customer-mail" name="mail">
                             </fieldset>
                             <fieldset class="modal-fieldset">
                                 <legend>Текст письма:</legend>
-                                <textarea class="text-form form-input" type="text" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
+                                <textarea class="text-form form-input" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
                             </fieldset>
                             <button class="button modal-button">Отправить</button>
                         </form>
@@ -217,7 +218,7 @@
                 </div>
             </div>
             <div class="map-marker">
-                <img src="img/map-marker.svg" alt="ул. Б. Конюшенная, д. 19/8" width="231" height="190">
+                <img class="hidden" src="img/map-marker.svg" alt="ул. Б. Конюшенная, д. 19/8" width="231" height="190">
             </div>
             <div class="contact">
                 <h2 class="about-article">NЁRDS DESIGN STUDIO</h2>
@@ -226,18 +227,18 @@
                 <a class="button" href="#">Напишите нам</a>
             </div>
             <div class="yandex-map">
-                <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e0ad25869030631fcf4a24c7ff3788aab9fd70ca8e3dbb982a97f3f14829a68&amp;source=constructor"></iframe>
+                <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adb77d1e84a5fc73fb3226b933257e547a4a69286e30585495268ab61ce74e3e4&amp;source=constructor"></iframe>
             </div>
         </div>
         <div class="flex-container">
             <div class="social-footer">
                 <section class="icons-social-flex">
                     <a class="social-icon" href="https://vk.com/htmlacademy">
-                        <img class="social-shadow" src="img/vk-ico.svg" alt="Вконтакте"></a>
+                        <img src="img/vk-ico.svg" alt="Вконтакте"></a>
                     <a class="social-icon" href="https://www.facebook.com/htmlacademy/">
-                        <img class="social-shadow" src="img/fb-ico.svg" alt="Facebook"></a>
+                        <img src="img/fb-ico.svg" alt="Facebook"></a>
                     <a class="social-icon" href="https://www.instagram.com/htmlacademy/">
-                        <img class="social-shadow" src="img/insta-ico.svg" alt="Instagram"></a>
+                        <img src="img/insta-ico.svg" alt="Instagram"></a>
                 </section>
                 <article class="social-description-article">
                     <h2 class="social-header">Давайте дружить, это выгодно!</h2>

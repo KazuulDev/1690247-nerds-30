@@ -23,6 +23,10 @@
     --border-item: #f2f2f2;
     --input-shadow: #cfcfcf;
     --slider-active: #c1c1c1;
+    --input-border-hover: #B4B9BB;
+    --sorting-color: #231F20;
+    --submit-hover: #dfdfdf;
+    --submit-active: #d5d5d5;
 }
 
 
@@ -626,13 +630,6 @@ li {
     color: var(--basic-black);
 }
 
-.filter {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 18px;
-    opacity: 30%;
-}
-
 .grid {
     font-size: 16px;
     line-height: 20px;
@@ -650,6 +647,15 @@ li {
     border: none;
     outline: none;
     margin-top: 30px;
+}
+
+.submit:hover {
+    background-color: var(--submit-hover);
+}
+
+.submit:active {
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    background-color: var(--submit-active);
 }
 
 
@@ -708,6 +714,11 @@ li {
     background-repeat: no-repeat;
 }
 
+.check-box:checked:hover+label::before,
+.check-box:hover+label::before {
+    opacity: 1;
+}
+
 .radio-button+label::before {
     position: absolute;
     content: "";
@@ -719,6 +730,11 @@ li {
     margin-top: -6px;
     background-image: url(../img/radio-off.svg);
     background-repeat: no-repeat;
+}
+
+.radio-button:hover+label::before,
+.radio-button:checked:hover+label::before {
+    opacity: 1;
 }
 
 .check-box:checked+label::before {
@@ -734,6 +750,11 @@ li {
     background-repeat: no-repeat;
 }
 
+.check-box:disabled+label,
+.check-box:disabled+label::before {
+    opacity: 0.3;
+}
+
 .radio-button:checked+label::before {
     position: absolute;
     content: "";
@@ -745,6 +766,11 @@ li {
     margin-top: -6px;
     background-image: url(../img/radio-on.svg);
     background-repeat: no-repeat;
+}
+
+.radio-button:disabled+label::before,
+.radio-button:disabled+label::before {
+    opacity: 0.3;
 }
 
 .input-number {
@@ -873,6 +899,7 @@ li {
     font-weight: 700;
     line-height: 53px;
     margin-bottom: 35px;
+    padding-top: 69px;
 }
 
 .modal-form legend {
@@ -881,6 +908,21 @@ li {
 
 .form-input {
     border: 2px solid var(--input-border);
+    border-radius: 3px;
+}
+
+.form-input:hover,
+.form-input:focus-within {
+    border: 2px solid var(--input-border-hover);
+}
+
+.form-input:active {
+    border: 2px solid var(--basic-black);
+    border-radius: 3px;
+}
+
+.form-input-invalid {
+    border: 2px solid var(--hover-red-nav);
     border-radius: 3px;
 }
 
@@ -918,7 +960,21 @@ li {
     opacity: 0.5;
 }
 
+.form-input-invalid::-webkit-input-placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.5;
+}
+
 .form-input::-moz-placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.5;
+}
+
+.form-input-invalid::-moz-placeholder {
     font-family: Roboto;
     font-size: 16px;
     line-height: 18px;
@@ -1189,4 +1245,42 @@ li {
 
 .further-list {
     width: 260px
+}
+
+.modal-escape {
+    position: absolute;
+    top: 80px;
+    right: 90px;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/close-cross.svg");
+    background-repeat: no-repeat;
+    border: 0;
+    opacity: 0.3;
+    z-index: 11;
+}
+
+.modal-escape:hover,
+.modal-escape:focus {
+    opacity: 1;
+}
+
+.modal-escape:active {
+    opacity: 0.1;
+}
+
+.items-sorting a {
+    color: var(--sorting-color);
+    opacity: 0.3;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.items-sorting a:hover {
+    opacity: 0.6;
+}
+
+.items-sorting a:active {
+    opacity: 1;
 }
