@@ -894,7 +894,7 @@ li {
     flex-wrap: wrap;
 }
 
-.modal-form h1 {
+.modal-form h2 {
     font-size: 45px;
     font-weight: 700;
     line-height: 53px;
@@ -1011,7 +1011,7 @@ li {
 }
 
 .first-slide {
-    background-image: url(../img/slider_mobile.png);
+    background-image: url(../img/nerds-index-slide1.png);
     background-position-x: 425px;
     background-position-y: 0px;
 }
