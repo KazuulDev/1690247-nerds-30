@@ -22,6 +22,7 @@
     --input-grey: #ababab;
     --border-item: #f2f2f2;
     --input-shadow: #cfcfcf;
+    --slider-active: #c1c1c1;
 }
 
 
@@ -132,6 +133,35 @@ li {
 
 .slider-wrapper {
     background-color: var(--nav-color);
+}
+
+.slider-navigation {
+    position: absolute;
+    margin-left: 676px;
+    margin-top: 303px;
+    display: flex;
+}
+
+.slider-navigation button {
+    list-style: none;
+    height: 18px;
+    width: 18px;
+    background-color: var(--background);
+    border-radius: 50%;
+    margin: 9px;
+    border: none;
+}
+
+.active-slide::before {
+    position: absolute;
+    content: "";
+    margin-top: -5px;
+    margin-left: -5px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid var(--slider-active);
+    border-radius: 50%;
+    z-index: 5;
 }
 
 .ul-nav-flex {
