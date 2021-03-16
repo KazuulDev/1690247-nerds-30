@@ -3,6 +3,7 @@
   --nav-color: #eeeeee;
   --non-basic-black: #283136;
   --basic-black: #000000;
+  --active-black: rgba(0, 0, 0, 0.3);
   --red-nav: #FB565A;
   --hover-red-nav: #e74246;
   --active-red-nav: #D7373B;
@@ -115,25 +116,11 @@ li {
   display: flex;
 }
 
-
-/* а тут конец будет у гридов (или нет) */
-
-
-/* Flex */
-
 .flex-container {
   margin: 0 auto;
   padding: 0 20px;
   width: 1160px;
   box-sizing: content-box;
-}
-
-.nav-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0px;
-  padding-top: 49px;
 }
 
 .slider-wrapper {
@@ -170,46 +157,67 @@ li {
   z-index: 5;
 }
 
-.ul-nav-flex {
-  display: flex;
-  justify-content: start;
-  flex-direction: row;
-  padding-left: 10px;
-  padding-right: 35px;
-  margin-bottom: 0px;
-}
-
-.user-nav-flex {
-  display: flex;
-  justify-content: start;
-  flex-direction: row;
-  padding-left: 10px;
-  padding-right: 35px;
-  margin-bottom: 0px;
-}
-
-.user-nav-grid{
-  grid-auto-flow: column;
-  gap: 25px;
+.nav {
   display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  padding-top: 48px;
+}
+
+.nav-logo {
+  justify-self: start;
+}
+
+.nav-main {
+  justify-self: center;
+}
+
+.nav-user {
+  justify-self: end;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 11px 0 0 -45px;
+  padding: 0;
 }
 
 .nav-link {
   display: grid;
   grid-auto-flow: column;
+  gap: 25px;
+  margin-left: 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
-.user-nav-grid::before {
+.nav-link:hover {
+  color: var(--red-nav);
+}
+
+.nav-link:active {
+  color: var(--active-black);
+}
+
+.nav-link[aria-current="page"] {
+  box-shadow: inset 0 -2px 0 0 var(--red-nav);
+}
+
+.nav-link-icon::before {
   content: "";
-  background-image: url("../img/cart-icon.svg"); 
-  background-repeat: no-repeat;
+  align-self: center;
   width: 15px;
   height: 15px;
-}
-
-.li-nav-flex {
-  margin-right: 45px;
-  margin-bottom: 0px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
 }
 
 .production-flex {
@@ -372,10 +380,6 @@ li {
   margin-bottom: 40px;
 }
 
-.main-nav {
-  margin-bottom: 0;
-}
-
 .page-description {
   font-weight: 500;
   font-size: 55px;
@@ -389,26 +393,6 @@ li {
 .nav-center {
   text-align: center;
 }
-
-.main-nav a {
-  color: var(--basic-black);
-}
-
-.main-nav a:hover {
-  color: var(--red-nav);
-}
-
-.main-nav a:active {
-  opacity: 0.3;
-}
-
-.current-page::after {
-  content: "";
-  position: absolute;
-  height: 100px;
-  width: auto;
-  background-color:var(--red-nav);
-  }
 
 .num-we-ul {
   display: flex;
