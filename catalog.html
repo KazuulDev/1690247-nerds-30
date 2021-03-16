@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
@@ -104,7 +104,7 @@
     </aside>
     <section class="catalog-items shop-flex">
       <div class="filter-wrapper">
-        <span class="filter-legend">Сортировать:</span>
+        <h2 class="filter-legend">Сортировать:</h2>
         <div class="items-sorting">
           <a href="#nowhere" class="filter">По цене</a>
           <a href="#nowhere" class="filter">По типу</a>
@@ -121,7 +121,7 @@
               <h3>Sedona</h3>
             </a>
             <p>Информационный сайт <br> для туристов</p>
-            <button class="item-button">9 900 ₽</button>
+            <button type="button" class="item-button">9 900 ₽</button>
           </div>
           <img class="item-img" src="img/sedona.png" width="358" height="578" alt="SEDONA">
         </div>
@@ -131,7 +131,7 @@
               <h3>Pink App</h3>
             </a>
             <p>Продуктовый лендинг приложения для iOS и Android</p>
-            <button class="item-button">9 900 ₽</button>
+            <button type="button" class="item-button">9 900 ₽</button>
           </div>
           <img class="item-img" src="img/pink.png" width="358" height="578" alt="Pink">
         </div>
@@ -141,7 +141,7 @@
               <h3>Barbershop</h3>
             </a>
             <p>Сайт салона красоты. <br> Для мужчин, да.</p>
-            <button class="item-button">9 900 ₽</button>
+            <button type="button" class="item-button">9 900 ₽</button>
           </div>
           <img class="item-img" src="img/barbershop.png" width="358" height="578" alt="Barbershop">
         </div>
@@ -151,7 +151,7 @@
               <h3>MISHKA</h3>
             </a>
             <p>Интернет-магазин <br> вязаных игрушек</p>
-            <button class="item-button">9 900 ₽</button>
+            <button type="button" class="item-button">9 900 ₽</button>
           </div>
           <img class="item-img" src="img/mishka.png" width="358" height="578" alt="Mishka">
         </div>
@@ -161,7 +161,7 @@
               <h3>A Plus</h3>
             </a>
             <p>Лендинг курсов повышения квалификации</p>
-            <button class="item-button">9 900 ₽</button>
+            <button type="button" class="item-button">9 900 ₽</button>
           </div>
           <img class="item-img" src="img/aplus.png" width="358" height="578" alt="APlus">
         </div>
@@ -171,7 +171,7 @@
               <h3>КВАСТ</h3>
             </a>
             <p>Промо-сайт производителя <br> крафтового кваса</p>
-            <button class="item-button">9 900 ₽</button>
+            <button type="button" class="item-button">9 900 ₽</button>
           </div>
           <img class="item-img" src="img/kvast.png" width="358" height="578" alt="Kvast">
         </div>
@@ -198,7 +198,7 @@
         <div class="modal-wrapper">
           <div class="modal-form">
             <h2>Напишите нам</h2>
-            <button class="modal-escape" aria-label="Закрыть форму обратной связи"></button>
+            <button type="button" class="modal-escape" aria-label="Закрыть форму обратной связи"></button>
             <form class="form-flex" method="GET" action="https://echo.htmlacademy.ru">
               <fieldset class="modal-fieldset">
                 <legend>Ваше имя:</legend>
@@ -212,7 +212,7 @@
                 <legend>Текст письма:</legend>
                 <textarea class="text-form form-input" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
               </fieldset>
-              <button class="button modal-button">Отправить</button>
+              <button type="submit" class="button modal-button">Отправить</button>
             </form>
           </div>
         </div>

@@ -44,14 +44,6 @@
   background-color: var(--background);
 }
 
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 30px;
-  background-color: transparent;
-  line-height: 18px;
-}
 
 li {
   list-style: none;
@@ -70,7 +62,14 @@ li {
   transform: scale(0);
 }
 
-
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 30px;
+  background-color: transparent;
+  line-height: 18px;
+}
 /* Grid */
 
 .index-grid {
@@ -175,16 +174,30 @@ li {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding-left: 10px;
   padding-right: 35px;
+  margin-top: ;
   margin-bottom: 0px;
 }
 
+.user-nav-grid{
+  margin-top: 30px;
+    display: inline-grid;
+    grid-template-columns: 15px max-content;
+    grid-auto-flow: column;
+}
+
 .user-nav-flex {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  padding-top: 10px;
-  margin-bottom: 0px;
+  grid-column: 2/3;
+}
+
+.user-nav-flex::before {
+  position: absolute;
+  content: "";
+  background-position-x: 0px;
+  background-image: url("../img/cart-icon.svg"); 
+  background-repeat: no-repeat;
+  grid-column: 1/2;
 }
 
 .li-nav-flex {
@@ -195,7 +208,7 @@ li {
 .production-flex {
   display: flex;
   flex-direction: row;
-  max-width: 260px;
+  max-width: 300px;
   justify-content: space-between;
   margin-top: 75px;
   margin-bottom: 92px;
@@ -203,6 +216,24 @@ li {
 
 .production-item {
   margin-right: 100px;
+  width: 300px;
+  height: 350px;
+  display: block;
+  background-position-x: left;
+  background-position-y: top;
+  background-repeat: no-repeat;
+}
+
+.first-product {
+  background-image: url(../img/site.png);
+}
+
+.second-product {
+  background-image: url(../img/app.png);
+}
+
+.third-product {
+  background-image: url(../img/present.png);
 }
 
 .partners-item {
@@ -296,11 +327,6 @@ li {
   background-position-y: -4px;
 }
 
-.nav-cart {
-  margin-right: 25px;
-  color: var(--grey);
-  opacity: 100%;
-}
 
 .aside-flex {
   display: flex;
@@ -556,12 +582,13 @@ li {
 }
 
 .product {
-  margin-top: 19px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+  padding-top: 146px;
+  width: 300px;
 }
 
 .production-item p {
@@ -834,12 +861,12 @@ li {
   color: var(--basic-black);
 }
 
-.contact p {
+.contact p, .contact a{
   margin: 0 50px 22px 50px;
   line-height: 18px;
 }
 
-.contact a {
+.contact .button {
   padding-left: 44px;
   padding-right: 44px;
   margin-left: 50px;
