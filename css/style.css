@@ -182,22 +182,14 @@ li {
 
 .user-nav-grid{
   margin-top: 30px;
-    display: inline-grid;
-    grid-template-columns: 15px max-content;
-    grid-auto-flow: column;
+  grid-auto-flow: column;
 }
 
-.user-nav-flex {
-  grid-column: 2/3;
-}
 
-.user-nav-flex::before {
-  position: absolute;
+.user-nav-grid::before {
   content: "";
-  background-position-x: 0px;
   background-image: url("../img/cart-icon.svg"); 
   background-repeat: no-repeat;
-  grid-column: 1/2;
 }
 
 .li-nav-flex {
