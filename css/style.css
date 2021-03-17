@@ -1045,6 +1045,8 @@ li {
 
 .third-slide {
   background-image: url(../img/nerds-index-slide3.png);
+  background-position-x: 417px;
+  background-position-y: 0px;
 }
 
 .filter-item {
