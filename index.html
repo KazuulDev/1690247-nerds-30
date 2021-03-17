@@ -39,7 +39,7 @@
         <button class="active-slide" type="button" aria-label="Второй слайд"></button>
         <button type="button" aria-label="Третий слайд"></button>
       </div>
-      <div class="slider-visible">
+      <div class="slider-hidden">
         <div class="slider first-slide">
           <div class="slider-description">
             <p class="slider-main">Долго, дорого,<br> скрупулезно.</p>
@@ -48,11 +48,11 @@
           </div>
         </div>
       </div>
-      <div class="slider-hidden">
+      <div class="slider-visible">
         <div class="slider second-slide">
           <div class="slider-description">
             <p class="slider-main">Любим математику как никто другой</p>
-            <p class="slider-text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+            <p class="slider-text">Никакого креатива, только математические формулы <br> для расчета идеальных пропорций</p>
             <a class="button link" href="#nowhere">Узнать больше</a>
           </div>
         </div>
@@ -142,31 +142,8 @@
   </main>
   <footer class="footer-grid">
     <div class="contact-wrapper">
-      <div class="hidden">
-        <div class="modal-wrapper">
-          <div class="modal-form">
-            <h2>Напишите нам</h2>
-            <button type="button" class="modal-escape" aria-label="Закрыть форму обратной связи"></button>
-            <form class="form-flex" method="GET" action="https://echo.htmlacademy.ru">
-              <fieldset class="modal-fieldset">
-                <legend>Ваше имя:</legend>
-                <input class="name-form form-input" type="text" placeholder="Имя Фамилия" id="customer-name" name="name">
-              </fieldset>
-              <fieldset class="modal-fieldset">
-                <legend>Ваш email:</legend>
-                <input class="mail-form form-input" type="text" placeholder="email@example.com" id="customer-mail" name="mail">
-              </fieldset>
-              <fieldset class="modal-fieldset">
-                <legend>Текст письма:</legend>
-                <textarea class="text-form form-input" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
-              </fieldset>
-              <button type="submit" class="button modal-button">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </div>
       <div class="map-marker">
-        <img class="hidden" src="img/map-marker.svg" alt="ул. Б. Конюшенная, д. 19/8" width="231" height="190">
+        <img class="" src="img/map-marker.svg" alt="ул. Б. Конюшенная, д. 19/8" width="231" height="190">
       </div>
       <div class="contact">
         <h2 class="about-article">NЁRDS DESIGN STUDIO</h2>
@@ -195,6 +172,29 @@
       </div>
     </div>
   </footer>
+  <div class="hidden">
+    <div class="modal-wrapper">
+      <div class="modal-form">
+        <h2>Напишите нам</h2>
+        <button type="button" class="modal-escape" aria-label="Закрыть форму обратной связи"></button>
+        <form class="form-flex" method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset class="modal-fieldset">
+            <legend>Ваше имя:</legend>
+            <input class="name-form form-input" type="text" placeholder="Имя Фамилия" id="customer-name" name="name">
+          </fieldset>
+          <fieldset class="modal-fieldset">
+            <legend>Ваш email:</legend>
+            <input class="mail-form form-input" type="text" placeholder="email@example.com" id="customer-mail" name="mail">
+          </fieldset>
+          <fieldset class="modal-fieldset">
+            <legend>Текст письма:</legend>
+            <textarea class="text-form form-input" placeholder="В свободной форме" id="customer-text" name="text" cols="30" rows="10"></textarea>
+          </fieldset>
+          <button type="submit" class="button modal-button">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

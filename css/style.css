@@ -16,8 +16,6 @@
   --social: #444444;
   --shadow: rgba(0, 1, 1, 0.1);
   --grey: #A6A6A6;
-  --browser-inactive: #4d4d4d, 0.12;
-  --browser-hover: #4d4d4d, 1;
   --input-border: #D7DCDE;
   --range: #f1f1f1;
   --input-grey: #ababab;
@@ -125,11 +123,12 @@ li {
 
 .slider-wrapper {
   background-color: var(--nav-color);
+  margin-top: -5px;
 }
 
 .slider-navigation {
   position: absolute;
-  margin-top: 303px;
+  margin-top: 308px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -225,8 +224,8 @@ li {
   flex-direction: row;
   max-width: 300px;
   justify-content: space-between;
-  margin-top: 75px;
-  margin-bottom: 92px;
+  margin-top: 80px;
+  margin-bottom: 78px;
 }
 
 .production-item {
@@ -448,7 +447,6 @@ li {
   grid-template-rows: 1fr min-content;
   background-image: url(../img/browser.svg);
   background-repeat: no-repeat;
-  background-color: var(--browser-inactive);
   padding-top: 40px;
   border-top: 0px;
   border-bottom-left-radius: 5px;
@@ -555,12 +553,12 @@ li {
   line-height: 55px;
   font-weight: 500;
   color: var(--basic-black);
-  margin-top: 75px;
+  margin-top: 78px;
 }
 
 .first-slide .slider-text {
-  margin-top: 25px;
-  margin-bottom: 55px;
+  margin-top: 27px;
+  margin-bottom: 51px;
 }
 
 .second-slide .slider-text {
@@ -890,12 +888,15 @@ li {
 .modal-wrapper {
   width: 960px;
   height: 590px;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 2;
   background-color: var(--background);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-  margin-top: -138px;
-  margin-left: 240px;
+  margin: 490px auto;
 }
 
 .modal-fieldset {
@@ -919,7 +920,7 @@ li {
   font-weight: 700;
   line-height: 53px;
   margin-bottom: 35px;
-  padding-top: 69px;
+  padding-top: 5x;
 }
 
 .modal-form legend {
@@ -1032,14 +1033,14 @@ li {
 
 .first-slide {
   background-image: url(../img/nerds-index-slide1.png);
-  background-position-x: 425px;
+  background-position-x: 418px;
   background-position-y: 0px;
 }
 
 .second-slide {
   background-image: url(../img/nerds-index-slide2.png);
-  background-position-x: 428px;
-  background-position-y: -4px;
+  background-position-x: 417px;
+  background-position-y: 0px;
 }
 
 .third-slide {
