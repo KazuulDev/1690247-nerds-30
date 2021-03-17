@@ -26,6 +26,7 @@
   --sorting-color: #231F20;
   --submit-hover: #dfdfdf;
   --submit-active: #d5d5d5;
+  --contact-text: rgba(102, 102, 102, 1)
 }
 
 
@@ -121,6 +122,12 @@ li {
   box-sizing: content-box;
 }
 
+.relative-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1160px;
+  position: relative;
+} 
 .slider-wrapper {
   background-color: var(--nav-color);
   margin-top: -5px;
@@ -225,7 +232,7 @@ li {
   max-width: 300px;
   justify-content: space-between;
   margin-top: 80px;
-  margin-bottom: 78px;
+  margin-bottom: 77px;
 }
 
 .production-item {
@@ -606,12 +613,12 @@ li {
 }
 
 .we-are {
-  margin-top: 36px;
+  margin-top: 34px;
   font-size: 45px;
   line-height: 100%;
   font-weight: 500;
   color: var(--basic-black);
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .num-we-are {
@@ -830,13 +837,14 @@ li {
 
 .contact {
   background-color: var(--background);
-  display: flex;
   flex-wrap: wrap;
   width: 319px;
   height: 308px;
-  position: absolute;
-  margin-top: 55px;
-  margin-left: 140px;
+  top: 104px;
+  left: 20px;
+  position: absolute ;
+  display: flex;
+  box-sizing: content-box;
   align-content: flex-start;
 }
 
@@ -845,23 +853,35 @@ li {
   line-height: 24px;
   margin-top: 52px;
   margin-left: 50px;
-  margin-bottom: 23px;
+  margin-bottom: 12px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-black);
 }
 
-.contact p, .contact a{
-  margin: 0 50px 22px 50px;
+
+.contact-text{
+  margin-left: 50px;
   line-height: 18px;
 }
 
-.contact .button {
+.contact-tel {
+color: var(--contact-textcon);
+font-size: 16px;
+line-height: 18px;
+text-decoration: none;
+margin-left: 50px;
+margin-top: 0px;
+margin-bottom: 40px;
+}
+
+.contact-button {
   padding-left: 44px;
   padding-right: 44px;
   margin-left: 50px;
-  margin-top: 13px;
-}
+  padding-top: 16px;
+  padding-bottom: 16px;
+  }
 
 .social-footer {
   display: flex;
@@ -888,7 +908,6 @@ li {
 .modal-wrapper {
   width: 960px;
   height: 590px;
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -896,7 +915,8 @@ li {
   z-index: 2;
   background-color: var(--background);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-  margin: 490px auto;
+  margin: auto;
+  position: fixed;
 }
 
 .modal-fieldset {
