@@ -228,16 +228,15 @@ li {
 
 .arrow-up {
   padding: 5px;
+  margin: 0;
   content: url(../img/icon-up-dir.svg);
 }
 
 .arrow-down {
   padding: 5px;
+  margin: 0;
   content: url(../img/icon-down-dir.svg);
 }
-
-
-
 
 .production-flex {
   display: flex;
@@ -382,7 +381,7 @@ li {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 40px;
-  margin-bottom: 48px;
+  margin-bottom: 35px;
   justify-content: space-between;
 }
 
@@ -392,6 +391,7 @@ li {
 }
 
 .catalog-page {
+  margin-top: 2px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
@@ -657,7 +657,7 @@ li {
   font-size: 16px;
   line-height: 22px;
   color: var(--social);
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .filter-legend {
@@ -675,6 +675,7 @@ li {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-top: 14px;
 }
 
 .grid {
@@ -688,7 +689,7 @@ li {
   line-height: 20px;
   padding-left: 38px;
   padding-top: 0px;
-  margin-top: -5px;
+  margin-top: -1px;
   margin-bottom: 20px;
 }
 
@@ -883,9 +884,9 @@ li {
 .contact h2 {
   font-size: 18px;
   line-height: 24px;
-  margin-top: 52px;
+  margin-top: 54px;
   margin-left: 50px;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-black);
@@ -904,7 +905,7 @@ line-height: 18px;
 text-decoration: none;
 margin-left: 50px;
 margin-top: 0px;
-margin-bottom: 40px;
+margin-bottom: 39px;
 }
 
 .contact-button {
@@ -1121,7 +1122,7 @@ margin-bottom: 40px;
 }
 
 .specs {
-  margin-top: 30px;
+  margin-top: 33px;
 }
 
 .filter-item ul {
@@ -1290,7 +1291,8 @@ margin-bottom: 40px;
   display: flex;
   flex-direction: row;
   padding-left: 0;
-  gap: 11px
+  gap: 11px;
+  margin-bottom:10px;
 }
 
 .pagination-list a {
@@ -1362,7 +1364,17 @@ margin-bottom: 40px;
 .items-sorting {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-items: end;
+  gap: 25px;
+}
+
+.items-sorting a{
+padding-top:5px;
+}
+
+.directions {
+padding-top: 5px;
+margin-left: 19px;
 }
 
 .items-sorting a {
@@ -1371,7 +1383,7 @@ margin-bottom: 40px;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 24px;
   margin: 0;
 }
 
@@ -1379,7 +1391,6 @@ margin-bottom: 40px;
 .items-sorting a:not([href]) {
   opacity: 1;
 }
-
 
 .clear-input::-webkit-outer-spin-button,
 .clear-input::-webkit-inner-spin-button {
