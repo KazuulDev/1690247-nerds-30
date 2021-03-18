@@ -58,8 +58,7 @@ li {
 }
 
 .hidden {
-  position: fixed;
-  transform: scale(0);
+display: none;
 }
 
 .link {
@@ -243,7 +242,7 @@ li {
   flex-direction: row;
   max-width: 300px;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 81px;
   margin-bottom: 77px;
 }
 
@@ -341,7 +340,7 @@ li {
 
 .description-logo {
   margin-left: 45px;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 .slider {
@@ -366,7 +365,7 @@ li {
   justify-content: flex-start;
   align-content: flex-start;
   flex-direction: column;
-  padding-top: 7px;
+  padding-top: 6px;
 }
 
 .shop-flex {
@@ -425,7 +424,7 @@ li {
   justify-content: start;
   width: 100px;
   margin-left: 5px;
-  margin-top: 14px;
+  margin-top: 15px;
   padding-right: 15px;
 }
 
@@ -434,11 +433,14 @@ li {
 }
 
 .feature-list {
+  display: flex;
+  flex-direction: column;
+  gap:25px;
   padding-left: 34px;
+  margin-top: 24px;
 }
 
 .feature-list li {
-  margin-top: 23px;
   padding-left: 2px;
 }
 
@@ -578,7 +580,7 @@ li {
 
 .first-slide .slider-text {
   margin-top: 27px;
-  margin-bottom: 51px;
+  margin-bottom: 53px;
 }
 
 .second-slide .slider-text {
@@ -608,7 +610,7 @@ li {
 .about-article {
   font-size: 16px;
   line-height: 24px;
-  margin-top: 43px;
+  margin-top: 41px;
   margin-left: 0;
   font-weight: 700;
   text-transform: uppercase;
@@ -626,7 +628,7 @@ li {
 }
 
 .we-are {
-  margin-top: 34px;
+  margin-top: 33px;
   font-size: 45px;
   line-height: 100%;
   font-weight: 500;
@@ -647,6 +649,7 @@ li {
 }
 
 .social-header {
+  margin-top: 27px;
   font-size: 36px;
   line-height: 100%;
   color: var(--basic-black);
@@ -884,7 +887,7 @@ li {
 .contact h2 {
   font-size: 18px;
   line-height: 24px;
-  margin-top: 54px;
+  margin-top: 51px;
   margin-left: 50px;
   margin-bottom: 11px;
   font-weight: 700;
@@ -1112,7 +1115,7 @@ margin-bottom: 39px;
 }
 
 .grid-field {
-  margin-top: 57px;
+  margin-top: 56px;
   margin-left: 0px;
   margin-right: 0px;
   padding: 0px;
