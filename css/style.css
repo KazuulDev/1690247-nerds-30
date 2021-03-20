@@ -59,6 +59,11 @@ li {
 
 .hidden {
 display: none;
+z-index: -4;
+}
+
+.show {
+  display: block;
 }
 
 .link {
@@ -883,6 +888,7 @@ display: none;
 }
 
 .contact {
+  z-index: 1;
   background-color: var(--background);
   flex-wrap: wrap;
   width: 319px;
@@ -953,6 +959,7 @@ margin-bottom: 39px;
 }
 
 .modal-wrapper {
+  z-index: 10;
   width: 960px;
   height: 590px;
   top: 0;
