@@ -59,7 +59,6 @@ li {
 
 .hidden {
 display: none;
-z-index: -4;
 }
 
 .show {

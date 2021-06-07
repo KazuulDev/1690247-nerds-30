@@ -4,11 +4,13 @@ const loginClose = loginPopup.querySelector(".modal-escape");
 
 
 
-loginLink.addEventListener("click", function () {
+loginLink.addEventListener("click", function (event) {
     evt.preventDefault();
-    loginPopup.classList.add("show");
+    loginPopup.classList.toggle("hidden");
 });
-loginClose.addEventListener("click", function (evt) {
+
+
+loginClose.addEventListener("click", function (event) {
     evt.preventDefault();
-    loginPopup.classList.remove("show");
+    loginPopup.classList.toggle("hidden");
   });
